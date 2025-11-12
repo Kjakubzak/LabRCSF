@@ -1,5 +1,5 @@
 CanonicalJoint,OpenUSD,BVH,ASF/AMC,VRM,HAnim,SMPL,SMPL-X,Mixamo,UEMannequin,UnityMecanim,
-Root (Parent of e.g. Hips),-,-,-,-,-,-,-,-,-,-,-,
+Root (Parent of e.g. Hips) / -,-,-,-,-,-,-,-,-,-,-,
 Hips / Pelvis,Hips,Hips,pelvis,hips,HumanoidRoot,pelvis,pelvis,Hips,Root (Pelvis),Hips,
 Spine / LowerBack,Torso,Spine,lowerback,spine,lumbosacral,spine1,spine1,Spine,Spine_01,Spine,
 Spine / Chest,Chest,Spine1 / Spine2,upperback / thorax,chest,thorax,spine2,spine2,Spine1 / Spine2,Spine_02 / Spine_03,Chest,
@@ -81,5 +81,6 @@ RightLowerLeg,RKnee,RightLeg,rtibia,rightLowerLeg,tibia_r,RLeg,RLeg,RightLeg,Cal
 RightFoot,RFoot,RightFoot,rfoot,rightFoot,foot_r,RFoot,RFoot,RightFoot,Foot_R,RightFoot,
 RightToes,RToes,EndSite,rtoes,rightToes,opt,-,RightToeBase,Toe_R (opt),RightToes (opt),,
 RightTip,RTip,-,-,rightTip,opt,-,RTip,-,RightTip (opt),,
+
 
 
