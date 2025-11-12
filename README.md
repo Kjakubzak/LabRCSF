@@ -18,7 +18,7 @@ This framework provides synthesis-based solutions through comprehensive intermed
 
 ## Tasks
 
-Validate each of the format descriptions:
+### Validate each of the format descriptions:
 
 - [ ] OpenUSD - Pixar Universal Scene Description skeletal framework
 - [ ] VRM - VRoid humanoid avatar specification  
@@ -30,7 +30,7 @@ Validate each of the format descriptions:
 - [ ] UE Mannequin - Unreal Engine reference skeleton
 - [ ] Unity Mecanim - Unity semantic humanoid system
 
-Create Tools
+### Create Tools
 
 - [ ] CSV-to-mapping-algorithm converter
 - [ ] Joint hierarchy validation tool
@@ -41,7 +41,7 @@ Create Tools
 - [ ] Community validation platform
 - [ ] Reference implementation library
 
-Research Documentation
+### Research Documentation
 
 - [x] Locate primary SMPL-X academic publications and implementation repositories
 - [x] Find original BVH format specifications and comprehensive documentation
@@ -51,16 +51,32 @@ Research Documentation
 - [x] Find Unity Mecanim Humanoid Animation system technical documentation
 - [x] Verify and update all reference links for accuracy and completeness
 
-RFC
+## RFC
 
-- [ ] How should twist bones be handled in minimal target formats?
+### Technical
+
+- [X] How should twist bones be handled in minimal target formats?
+    Resolved: incorporate description into the main text. Diagrams would be good to incorporate.
+    A twist joint (sometimes called a roll or twist bone) is a helper joint inserted along a limb — usually the upper arm, forearm, thigh, or calf — to distribute rotational deformation (especially twisting around the bone’s primary axis) more naturally across the mesh.
+- [X] Should facial expression joints use standardized blendshape names?
+    In future development, we could provide guidance on how the face joints (which are pseudo-skin/muscle clusters) that they map in some manner to FACS. Specifying FACS is out of scope, but referencing it canonically is in scope.
+    Facial expressions in general are going to be a combination of joints and blendshapes.
+    Breaking out expressions as a future topic seems like a strong direction.
 - [ ] What constitutes acceptable quality loss during downward conversion?
-- [ ] Should facial expression joints use standardized blendshape names?
-- [ ] How do we handle proprietary engine-specific features (Animation Blueprints, etc.)?
 - [ ] What validation metrics best assess cross-format conversion quality?
+- [X] Should there be performance tiers for different hardware capabilities?
+An avatar can use a cluster geometry for hierarchy (like a suit of armor), or it can be skin-cluster weighted. We can describe common techniques as informative text. Skeletal LODs define subsets of bones. The hierarchy definition can show how Skeletal subsets map to the canonical hierarchy. We could provide guidance as to common methods for delegating functionality to articulation schemes within the same hierarchy.
+
+### Compatiblity
+
+- [ ] How do we handle proprietary engine-specific features (Animation Blueprints, etc.)?
 - [ ] How should the framework accommodate emerging standards (VR haptics, AI-driven animation)?
+
+### Governance
+
 - [ ] What governance model ensures long-term framework evolution?
-- [ ] Should there be performance tiers for different hardware capabilities?
+
+
 
 ## License
 
