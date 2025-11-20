@@ -21,14 +21,15 @@ This framework provides synthesis-based solutions through comprehensive intermed
 ### Validate each of the format descriptions:
 
 - [ ] OpenUSD - Pixar Universal Scene Description skeletal framework
-- [ ] VRM - VRoid humanoid avatar specification
+- [x] VRM - VRoid [humanoid avatar specification](https://github.com/vrm-c/vrm-specification/blob/master/specification/VRMC_vrm-1.0/humanoid.md)
 - [ ] HAnim - Web3D Consortium humanoid animation standard
 - [ ] SMPL-X - Statistical Multi-Person Linear model eXpressive
 - [ ] BVH - Biovision Hierarchy motion capture format
 - [ ] ASF/AMC - Acclaim motion capture format
 - [ ] Mixamo - Adobe automated animation service
 - [ ] UE Mannequin - Unreal Engine reference skeleton
-- [ ] Unity Mecanim - Unity semantic humanoid system
+- [x] Unity Mecanim - Unity semantic humanoid system
+- [x] Godot - Godot Engine [SkeletonProfileHumanoid](https://docs.godotengine.org/en/stable/classes/class_skeletonprofilehumanoid.html)
 
 ### Create Tools
 

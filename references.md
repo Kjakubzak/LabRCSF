@@ -131,6 +131,14 @@ This document lists the primary documentation sources for each skeletal format a
 
 **Description:** Unity Mecanim provides semantic role-based humanoid animation through Avatar abstraction, enabling automatic retargeting between diverse skeletal rigs through standardized anatomical role mapping.
 
+## Godot SkeletonProfileHumanoid
+
+**Primary Documentation:**
+
+- Godot Engine Documentation - https://docs.godotengine.org/en/stable/classes/class_skeletonprofilehumanoid.html
+
+**Description:** Godot's SkeletonProfileHumanoid class defines a preset SkeletonProfile that is optimized for the human form. It contains 56 bones divided into 4 groups.
+
 ---
 
 ## Research Notes

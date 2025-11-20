@@ -1,83 +1,91 @@
-CanonicalJoint,OpenUSD,BVH,ASF/AMC,VRM,HAnim,SMPL,SMPL-X,Mixamo,UEMannequin,UnityMecanim,
-Root (Parent of e.g. Hips) / -,-,-,-,-,-,-,-,-,-,-,
-Hips / Pelvis,Hips,Hips,pelvis,hips,HumanoidRoot,pelvis,pelvis,Hips,Root (Pelvis),Hips,
-Spine / LowerBack,Torso,Spine,lowerback,spine,lumbosacral,spine1,spine1,Spine,Spine_01,Spine,
-Spine / Chest,Chest,Spine1 / Spine2,upperback / thorax,chest,thorax,spine2,spine2,Spine1 / Spine2,Spine_02 / Spine_03,Chest,
-UpperChest,UpChest,-,-,upperChest,opt,-,-,-,-,UpperChest (opt),
-Neck,Neck,Neck,lowerneck,neck,neck,neck,neck,Neck,Neck_01,Neck,
-Head,Head,Head,head,head,head,head,head,Head,Head,Head,
-Jaw,,EndSite,opt,jaw,opt,opt,jaw,opt,opt,opt,
-LeftEye,LEye,EndSite,eye_l,eye_l,eyeball_l,-,LEye,opt,Eye_L,LeftEye,
-Left / Right Eyelids,L / R controls x 12,-,-,-,-,-,-,-,-,-,
-LeftEyeTwist,-,-,-,-,-,-,LEyeTwist,-,Eye_L_Twist,-,
-RightEye,REye,EndSite,eye_r,eye_r,eyeball_r,-,REye,opt,Eye_R,RightEye,
-RightEyeTwist,-,-,-,-,-,-,REyeTwist,-,Eye_R_Twist,-,
-Nose,Nose,-,-,nose,opt,-,Nose,opt,opt,-,
-Chin,Chin / LChin / RChin,-,-,chin,opt,-,Chin,opt,opt,-,
-Left / Right Ear,LEar / REar,-,-,-,-,-,-,-,-,-,
-LeftCheek,LCheek,-,-,leftCheek,opt,-,LCheek,opt,opt,-,
-RightCheek,RCheek,-,-,rightCheek,opt,-,RCheek,opt,opt,-,
-Mouth,Mouth,-,-,mouth,opt,-,Mouth,opt,opt,-,
-UpperLip,UpLip / LUpLip / RUpLip,-,-,upperLip,opt,-,UpLip,opt,opt,-,
-LowerLip,LoLip / LLoLip / RLoLip,-,-,lowerLip,opt,-,LoLip,opt,opt,-,
-LeftLipCorner,LLipCorner,-,-,leftLipCorner,opt,-,LLipCorner,opt,opt,-,
-RightLipCorner,RLipCorner,-,-,rightLipCorner,opt,-,RLipCorner,opt,opt,-,
-Brow,LBrow / Brow,-,-,brow,opt,-,LBrow / RBrow,opt,opt,-,
-LeftClavicle,LShldr,LeftShoulder,lclavicle,leftShoulder,clavicle_l,LShldr,LShldr,LeftShoulder,Clavicle_L,LeftShoulder,
-LeftUpperArm,LArm,LeftArm,lhumerus,leftUpperArm,humerus_l,LArm,LArm,LeftArm,UpperArm_L,LeftUpperArm,
-LeftLowerArm,LElbow,LeftForeArm,lradius,leftLowerArm,radius_l,LForeArm,LForeArm,LeftForeArm,LowerArm_L,LeftLowerArm,
-LeftHand,LHand,LeftHand,lwrist,leftHand,hand_l,LHand,LHand,LeftHand,Hand_L,LeftHand,
-LeftThumbProximal,LThumb,-,lthumb,leftThumbProximal,opt,-,LThumb,LThumb,opt,opt,
-LeftThumbIntermediate,LThumbMid,-,-,leftThumbIntermediate,opt,-,LThumbMid,LThumbMid,opt,opt,
-LeftThumbDistal,LThumbTip,-,-,leftThumbDistal,opt,-,LThumbTip,LThumbTip,opt,opt,
-LeftThumbTip,LThumbEnd,-,-,leftThumbTip,opt,-,LThumbEnd,LThumbEnd,opt,opt,
-LeftIndexProximal,LIndex,-,lindex,leftIndexProximal,opt,-,LIndex,LIndex,opt,opt,
-LeftIndexIntermediate,LIndexMid,-,-,leftIndexIntermediate,opt,-,LIndexMid,LIndexMid,opt,opt,
-LeftIndexDistal,LIndexTip,-,-,leftIndexDistal,opt,-,LIndexTip,LIndexTip,opt,opt,
-LeftIndexTip,LIndexEnd,-,-,leftIndexTip,opt,-,LIndexEnd,LIndexEnd,opt,opt,
-LeftMiddleProximal,LMiddle,-,-,leftMiddleProximal,opt,-,LMiddle,LMiddle,opt,opt,
-LeftMiddleIntermediate,LMiddleMid,-,lmiddle,leftMiddleIntermediate,opt,-,LMiddleMid,LMiddleMid,opt,opt,
-LeftMiddleDistal,LMiddleTip,-,-,leftMiddleDistal,opt,-,LMiddleTip,LMiddleTip,opt,opt,
-LeftMiddleTip,LMiddleEnd,-,-,leftMiddleTip,opt,-,LMiddleEnd,LMiddleEnd,opt,opt,
-LeftRingProximal,LRing,-,lring,leftRingProximal,opt,-,LRing,LRing,opt,opt,
-LeftRingIntermediate,LRingMid,-,-,leftRingIntermediate,opt,-,LRingMid,LRingMid,opt,opt,
-LeftRingDistal,LRingTip,-,-,leftRingDistal,opt,-,LRingTip,LRingTip,opt,opt,
-LeftRingTip,LRingEnd,-,-,leftRingTip,opt,-,LRingEnd,LRingEnd,opt,opt,
-LeftPinkyProximal,LPinky,-,lpinky,leftPinkyProximal,opt,-,LPinky,LPinky,opt,opt,
-LeftPinkyIntermediate,LPinkyMid,-,-,leftPinkyIntermediate,opt,-,LPinkyMid,LPinkyMid,opt,opt,
-LeftPinkyDistal,LPinkyTip,-,-,leftPinkyDistal,opt,-,LPinkyTip,LPinkyTip,opt,opt,
-LeftPinkyTip,LPinkyEnd,-,-,leftPinkyTip,opt,-,LPinkyEnd,LPinkyEnd,opt,opt,
-RightClavicle,RShldr,RightShoulder,rclavicle,rightShoulder,clavicle_r,RShldr,RShldr,RightShoulder,Clavicle_R,RightShoulder,
-RightUpperArm,RArm,RightArm,rhumerus,rightUpperArm,humerus_r,RArm,RArm,RightArm,UpperArm_R,RightUpperArm,
-RightLowerArm,RElbow,RightForeArm,rradius,rightLowerArm,radius_r,RForeArm,RForeArm,RightForeArm,LowerArm_R,RightLowerArm,
-RightHand,RHand,RightHand,rwrist,rightHand,hand_r,RHand,RHand,RightHand,Hand_R,RightHand,
-RightThumbProximal,RThumb,-,rthumb,rightThumbProximal,opt,-,RThumb,RThumb,opt,opt,
-RightThumbIntermediate,RThumbMid,-,-,rightThumbIntermediate,opt,-,RThumbMid,RThumbMid,opt,opt,
-RightThumbDistal,RThumTip,-,-,rightThumbDistal,opt,-,RThumbTip,RThumbTip,opt,opt,
-RightThumbTip,RThumEnd,-,-,rightThumbTip,opt,-,RThumbEnd,RThumbEnd,opt,opt,
-RightIndexProximal,RIndex,-,rindex,rightIndexProximal,opt,-,RIndex,RIndex,opt,opt,
-RightIndexIntermediate,RIndexMid,-,-,rightIndexIntermediate,opt,-,RIndexMid,RIndexMid,opt,opt,
-RightIndexDistal,RIndexTip,-,-,rightIndexDistal,opt,-,RIndexTip,RIndexTip,opt,opt,
-RightIndexTip,RIndexEnd,-,-,rightIndexTip,opt,-,RIndexEnd,RIndexEnd,opt,opt,
-RightMiddleProximal,RMiddle,-,rmiddle,rightMiddleProximal,opt,-,RMiddle,RMiddle,opt,opt,
-RightMiddleIntermediate,RMiddleMid,-,-,rightMiddleIntermediate,opt,-,RMiddleMid,RMiddleMid,opt,opt,
-RightMiddleDistal,RMiddleTip,-,-,rightMiddleDistal,opt,-,RMiddleTip,RMiddleTip,opt,opt,
-RightMiddleTip,RMiddleEnd,-,-,rightMiddleTip,opt,-,RMiddleEnd,RMiddleEnd,opt,opt,
-RightRingProximal,RRing,-,rring,rightRingProximal,opt,-,RRing,RRing,opt,opt,
-RightRingIntermediate,RRingMid,-,-,rightRingIntermediate,opt,-,RRingMid,RRingMid,opt,opt,
-RightRingDistal,RRingTip,-,-,rightRingDistal,opt,-,RRingTip,RRingTip,opt,opt,
-RightRingTip,RRingEnd,-,-,rightRingTip,opt,-,RRingEnd,RRingEnd,opt,opt,
-RightPinkyProximal,RPinky,-,rpinky,rightPinkyProximal,opt,-,RPinky,RPinky,opt,opt,
-RightPinkyIntermediate,RPinkyMid,-,-,rightPinkyIntermediate,opt,-,RPinkyMid,RPinkyMid,opt,opt,
-RightPinkyDistal,RPinkyTip,-,-,rightPinkyDistal,opt,-,RPinkyTip,RPinkyTip,opt,opt,
-RightPinkyTip,RPinkyEnd,-,-,rightPinkyTip,opt,-,RPinkyEnd,RPinkyEnd,opt,opt,
-LeftUpperLeg,LLeg,LeftUpLeg,lfemur,leftUpperLeg,femur_l,LThigh,LThigh,LeftUpLeg,Thigh_L,LeftUpperLeg,
-LeftLowerLeg,LKnee,LeftLeg,ltibia,leftLowerLeg,tibia_l,LLeg,LLeg,LeftLeg,Calf_L,LeftLowerLeg,
-LeftFoot,LFoot,LeftFoot,lfoot,leftFoot,foot_l,LFoot,LFoot,LeftFoot,Foot_L,LeftFoot,
-LeftToes,LToes,EndSite,ltoes,leftToes,opt,-,LeftToes,LeftToeBase,Toe_L (opt),LeftToes (opt),
-LeftTip,LTip,-,-,leftTip,opt,-,LTip,-,LeftTip (opt),,
-RightUpperLeg,RLeg,RightUpLeg,rfemur,rightUpperLeg,femur_r,RThigh,RThigh,RightUpLeg,Thigh_R,RightUpperLeg,
-RightLowerLeg,RKnee,RightLeg,rtibia,rightLowerLeg,tibia_r,RLeg,RLeg,RightLeg,Calf_R,RightLowerLeg,
-RightFoot,RFoot,RightFoot,rfoot,rightFoot,foot_r,RFoot,RFoot,RightFoot,Foot_R,RightFoot,
-RightToes,RToes,EndSite,rtoes,rightToes,opt,-,RightToeBase,Toe_R (opt),RightToes (opt),,
-RightTip,RTip,-,-,rightTip,opt,-,RTip,-,RightTip (opt),,
+CanonicalJoint,OpenUSD,BVH,ASF/AMC,VRM,HAnim,SMPL,SMPL-X,Mixamo,UEMannequin,UnityMecanim,Godot
+Root (Parent of e.g. Hips),-,-,-,root,-,-,-,-,-,-,Root
+Hips / Pelvis,Hips,Hips,pelvis,hips,HumanoidRoot,pelvis,pelvis,Hips,Root (Pelvis),Hips,Hips
+Spine / LowerBack,Torso,Spine,lowerback,spine,lumbosacral,spine1,spine1,Spine,Spine_01,Spine,Spine
+Spine / Chest,Chest,Spine1 / Spine2,upperback / thorax,chest,thorax,spine2,spine2,Spine1 / Spine2,Spine_02 / Spine_03,Chest,Chest
+UpperChest,UpChest,-,-,upperChest,opt,-,-,-,-,UpperChest (opt),UpperChest
+Neck,Neck,Neck,lowerneck,neck,neck,neck,neck,Neck,Neck_01,Neck,Neck
+Head,Head,Head,head,head,head,head,head,Head,Head,Head,Head
+Jaw,-,EndSite,opt,jaw,opt,opt,jaw,opt,opt,Jaw,Jaw
+LeftEye,LEye,EndSite,eye_l,leftEye,eyeball_l,-,LEye,opt,Eye_L,LeftEye,LeftEye
+Left / Right Eyelids,L / R controls x 12,-,-,-,-,-,-,-,-,-,-
+LeftEyeTwist,-,-,-,-,-,-,LEyeTwist,-,Eye_L_Twist,-,-
+RightEye,REye,EndSite,eye_r,rightEye,eyeball_r,-,REye,opt,Eye_R,RightEye,RightEye
+RightEyeTwist,-,-,-,-,-,-,REyeTwist,-,Eye_R_Twist,-,-
+Nose,Nose,-,-,-,opt,-,Nose,opt,opt,-,-
+Chin,Chin / LChin / RChin,-,-,-,opt,-,Chin,opt,opt,-,-
+Left / Right Ear,LEar / REar,-,-,-,-,-,-,-,-,-,-
+LeftCheek,LCheek,-,-,-,opt,-,LCheek,opt,opt,-,-
+RightCheek,RCheek,-,-,-,opt,-,RCheek,opt,opt,-,-
+Mouth,Mouth,-,-,-,opt,-,Mouth,opt,opt,-,-
+UpperLip,UpLip / LUpLip / RUpLip,-,-,-,opt,-,UpLip,opt,opt,-,-
+LowerLip,LoLip / LLoLip / RLoLip,-,-,-,opt,-,LoLip,opt,opt,-,-
+LeftLipCorner,LLipCorner,-,-,-,opt,-,LLipCorner,opt,opt,-,-
+RightLipCorner,RLipCorner,-,-,-,opt,-,RLipCorner,opt,opt,-,-
+Brow,LBrow / Brow,-,-,-,opt,-,LBrow / RBrow,opt,opt,-,-
+LeftClavicle,LShldr,LeftShoulder,lclavicle,leftShoulder,clavicle_l,LShldr,LShldr,LeftShoulder,Clavicle_L,LeftShoulder,LeftShoulder
+LeftUpperArm,LArm,LeftArm,lhumerus,leftUpperArm,humerus_l,LArm,LArm,LeftArm,UpperArm_L,LeftUpperArm,LeftUpperArm
+LeftLowerArm,LElbow,LeftForeArm,lradius,leftLowerArm,radius_l,LForeArm,LForeArm,LeftForeArm,LowerArm_L,LeftLowerArm,LeftLowerArm
+LeftHand,LHand,LeftHand,lwrist,leftHand,hand_l,LHand,LHand,LeftHand,Hand_L,LeftHand,LeftHand
+LeftThumbMetacarpal,LThumb,-,lthumb,leftThumbMetacarpal,opt,-,LThumb,LThumb,opt,LeftThumbProximal,LeftThumbMetacarpal
+LeftThumbProximal,LThumbMid,-,-,leftThumbProximal,opt,-,LThumbMid,LThumbMid,opt,LeftThumbIntermediate,LeftThumbProximal
+LeftThumbDistal,LThumbTip,-,-,leftThumbDistal,opt,-,LThumbTip,LThumbTip,opt,LeftThumbDistal,LeftThumbDistal
+LeftThumbTip,LThumbEnd,-,-,-,opt,-,LThumbEnd,LThumbEnd,opt,-,-
+LeftIndexMetacarpal,-,-,-,-,-,-,-,-,-,-,-
+LeftIndexProximal,LIndex,-,lindex,leftIndexProximal,opt,-,LIndex,LIndex,opt,LeftIndexProximal,LeftIndexProximal
+LeftIndexIntermediate,LIndexMid,-,-,leftIndexIntermediate,opt,-,LIndexMid,LIndexMid,opt,LeftIndexIntermediate,LeftIndexIntermediate
+LeftIndexDistal,LIndexTip,-,-,leftIndexDistal,opt,-,LIndexTip,LIndexTip,opt,LeftIndexDistal,LeftIndexDistal
+LeftIndexTip,LIndexEnd,-,-,-,opt,-,LIndexEnd,LIndexEnd,opt,-,-
+LeftMiddleMetacarpal,-,-,-,-,-,-,-,-,-,-,-
+LeftMiddleProximal,LMiddle,-,-,leftMiddleProximal,opt,-,LMiddle,LMiddle,opt,LeftMiddleProximal,LeftMiddleProximal
+LeftMiddleIntermediate,LMiddleMid,-,lmiddle,leftMiddleIntermediate,opt,-,LMiddleMid,LMiddleMid,opt,LeftMiddleIntermediate,LeftMiddleIntermediate
+LeftMiddleDistal,LMiddleTip,-,-,leftMiddleDistal,opt,-,LMiddleTip,LMiddleTip,opt,LeftMiddleDistal,LeftMiddleDistal
+LeftMiddleTip,LMiddleEnd,-,-,-,opt,-,LMiddleEnd,LMiddleEnd,opt,-,-
+LeftRingMetacarpal,-,-,-,-,-,-,-,-,-,-,-
+LeftRingProximal,LRing,-,lring,leftRingProximal,opt,-,LRing,LRing,opt,LeftRingProximal,LeftRingProximal
+LeftRingIntermediate,LRingMid,-,-,leftRingIntermediate,opt,-,LRingMid,LRingMid,opt,LeftRingIntermediate,LeftRingIntermediate
+LeftRingDistal,LRingTip,-,-,leftRingDistal,opt,-,LRingTip,LRingTip,opt,LeftRingDistal,LeftRingDistal
+LeftRingTip,LRingEnd,-,-,-,opt,-,LRingEnd,LRingEnd,opt,-,-
+LeftPinkyMetacarpal,-,-,-,-,-,-,-,-,-,-,-
+LeftPinkyProximal,LPinky,-,lpinky,leftLittleProximal,opt,-,LPinky,LPinky,opt,LeftLittleProximal,LeftLittleProximal
+LeftPinkyIntermediate,LPinkyMid,-,-,leftLittleIntermediate,opt,-,LPinkyMid,LPinkyMid,opt,LeftLittleIntermediate,LeftLittleIntermediate
+LeftPinkyDistal,LPinkyTip,-,-,leftLittleDistal,opt,-,LPinkyTip,LPinkyTip,opt,LeftLittleDistal,LeftLittleDistal
+LeftPinkyTip,LPinkyEnd,-,-,-,opt,-,LPinkyEnd,LPinkyEnd,opt,-,-
+RightClavicle,RShldr,RightShoulder,rclavicle,rightShoulder,clavicle_r,RShldr,RShldr,RightShoulder,Clavicle_R,RightShoulder,RightShoulder
+RightUpperArm,RArm,RightArm,rhumerus,rightUpperArm,humerus_r,RArm,RArm,RightArm,UpperArm_R,RightUpperArm,RightUpperArm
+RightLowerArm,RElbow,RightForeArm,rradius,rightLowerArm,radius_r,RForeArm,RForeArm,RightForeArm,LowerArm_R,RightLowerArm,RightLowerArm
+RightHand,RHand,RightHand,rwrist,rightHand,hand_r,RHand,RHand,RightHand,Hand_R,RightHand,RightHand
+RightThumbMetacarpal,RThumb,-,rthumb,rightThumbMetacarpal,opt,-,RThumb,RThumb,opt,RightThumbProximal,RightThumbMetacarpal
+RightThumbProximal,RThumbMid,-,-,rightThumbProximal,opt,-,RThumbMid,RThumbMid,opt,RightThumbIntermediate,RightThumbProximal
+RightThumbDistal,RThumTip,-,-,rightThumbDistal,opt,-,RThumbTip,RThumbTip,opt,RightThumbDistal,RightThumbDistal
+RightThumbTip,RThumEnd,-,-,-,opt,-,RThumbEnd,RThumbEnd,opt,-,-
+RightIndexMetacarpal,-,-,-,-,-,-,-,-,-,-,-
+RightIndexProximal,RIndex,-,rindex,rightIndexProximal,opt,-,RIndex,RIndex,opt,RightIndexProximal,RightIndexProximal
+RightIndexIntermediate,RIndexMid,-,-,rightIndexIntermediate,opt,-,RIndexMid,RIndexMid,opt,RightIndexIntermediate,RightIndexIntermediate
+RightIndexDistal,RIndexTip,-,-,rightIndexDistal,opt,-,RIndexTip,RIndexTip,opt,RightIndexDistal,RightIndexDistal
+RightIndexTip,RIndexEnd,-,-,-,opt,-,RIndexEnd,RIndexEnd,opt,-,-
+RightMiddleMetacarpal,-,-,-,-,-,-,-,-,-,-,-
+RightMiddleProximal,RMiddle,-,rmiddle,rightMiddleProximal,opt,-,RMiddle,RMiddle,opt,RightMiddleProximal,RightMiddleProximal
+RightMiddleIntermediate,RMiddleMid,-,-,rightMiddleIntermediate,opt,-,RMiddleMid,RMiddleMid,opt,RightMiddleIntermediate,RightMiddleIntermediate
+RightMiddleDistal,RMiddleTip,-,-,rightMiddleDistal,opt,-,RMiddleTip,RMiddleTip,opt,RightMiddleDistal,RightMiddleDistal
+RightMiddleTip,RMiddleEnd,-,-,-,opt,-,RMiddleEnd,RMiddleEnd,opt,-,-
+RightRingMetacarpal,-,-,-,-,-,-,-,-,-,-,-
+RightRingProximal,RRing,-,rring,rightRingProximal,opt,-,RRing,RRing,opt,RightRingProximal,RightRingProximal
+RightRingIntermediate,RRingMid,-,-,rightRingIntermediate,opt,-,RRingMid,RRingMid,opt,RightRingIntermediate,RightRingIntermediate
+RightRingDistal,RRingTip,-,-,rightRingDistal,opt,-,RRingTip,RRingTip,opt,RightRingDistal,RightRingDistal
+RightRingTip,RRingEnd,-,-,-,opt,-,RRingEnd,RRingEnd,opt,-,-
+RightPinkyMetacarpal,-,-,-,-,-,-,-,-,-,-,-
+RightPinkyProximal,RPinky,-,rpinky,rightLittleProximal,opt,-,RPinky,RPinky,opt,RightLittleProximal,RightLittleProximal
+RightPinkyIntermediate,RPinkyMid,-,-,rightLittleIntermediate,opt,-,RPinkyMid,RPinkyMid,opt,RightLittleIntermediate,RightLittleIntermediate
+RightPinkyDistal,RPinkyTip,-,-,rightLittleDistal,opt,-,RPinkyTip,RPinkyTip,opt,RightLittleDistal,RightLittleDistal
+RightPinkyTip,RPinkyEnd,-,-,-,opt,-,RPinkyEnd,RPinkyEnd,opt,-,-
+LeftUpperLeg,LLeg,LeftUpLeg,lfemur,leftUpperLeg,femur_l,LThigh,LThigh,LeftUpLeg,Thigh_L,LeftUpperLeg,LeftUpperLeg
+LeftLowerLeg,LKnee,LeftLeg,ltibia,leftLowerLeg,tibia_l,LLeg,LLeg,LeftLeg,Calf_L,LeftLowerLeg,LeftLowerLeg
+LeftFoot,LFoot,LeftFoot,lfoot,leftFoot,foot_l,LFoot,LFoot,LeftFoot,Foot_L,LeftFoot,LeftFoot
+LeftToes,LToes,EndSite,ltoes,leftToes,opt,-,LeftToes,LeftToeBase,Toe_L (opt),LeftToes (opt),LeftToes
+LeftTip,LTip,-,-,-,opt,-,LTip,-,LeftTip (opt),-,-
+RightUpperLeg,RLeg,RightUpLeg,rfemur,rightUpperLeg,femur_r,RThigh,RThigh,RightUpLeg,Thigh_R,RightUpperLeg,RightUpperLeg
+RightLowerLeg,RKnee,RightLeg,rtibia,rightLowerLeg,tibia_r,RLeg,RLeg,RightLeg,Calf_R,RightLowerLeg,RightLowerLeg
+RightFoot,RFoot,RightFoot,rfoot,rightFoot,foot_r,RFoot,RFoot,RightFoot,Foot_R,RightFoot,RightFoot
+RightToes,RToes,EndSite,rtoes,rightToes,opt,-,-,RightToeBase,Toe_R (opt),RightToes (opt),RightToes
+RightTip,RTip,-,-,-,opt,-,RTip,-,RightTip (opt),-,-

@@ -165,26 +165,30 @@ Hips / Pelvis (ROOT)
 │     │              ├── LeftLowerArmTwist (opt / twist)
 │     │              └── LeftHand
 │     │                   ├── LeftThumb
+│     │                   │    ├── LeftThumbMetacarpal (opt / twist)
 │     │                   │    ├── LeftThumbProximal (opt / twist)
-│     │                   │    ├── LeftThumbIntermediate (opt / twist)
 │     │                   │    ├── LeftThumbDistal (opt / twist)
 │     │                   │    └── LeftThumbTip (opt)
 │     │                   ├── LeftIndex
+│     │                   │    ├── LeftIndexMetacarpal (opt / uncommon)
 │     │                   │    ├── LeftIndexProximal (opt / twist)
 │     │                   │    ├── LeftIndexIntermediate (opt / twist)
 │     │                   │    ├── LeftIndexDistal (opt / twist)
 │     │                   │    └── LeftIndexTip (opt)
 │     │                   ├── LeftMiddle
+│     │                   │    ├── LeftMiddleMetacarpal (opt / uncommon)
 │     │                   │    ├── LeftMiddleProximal (opt / twist)
 │     │                   │    ├── LeftMiddleIntermediate (opt / twist)
 │     │                   │    ├── LeftMiddleDistal (opt / twist)
 │     │                   │    └── LeftMiddleTip (opt)
 │     │                   ├── LeftRing
+│     │                   │    ├── LeftRingMetacarpal (opt / uncommon)
 │     │                   │    ├── LeftRingProximal (opt / twist)
 │     │                   │    ├── LeftRingIntermediate (opt / twist)
 │     │                   │    ├── LeftRingDistal (opt / twist)
 │     │                   │    └── LeftRingTip (opt)
 │     │                   └── LeftPinky
+│     │                        ├── LeftPinkyMetacarpal (opt / uncommon)
 │     │                        ├── LeftPinkyProximal (opt / twist)
 │     │                        ├── LeftPinkyIntermediate (opt / twist)
 │     │                        ├── LeftPinkyDistal (opt / twist)
@@ -196,26 +200,30 @@ Hips / Pelvis (ROOT)
 │                    ├── RightLowerArmTwist (opt / twist)
 │                    └── RightHand
 │                         ├── RightThumb
+│                         │    ├── RightThumbMetacarpal (opt / twist)
 │                         │    ├── RightThumbProximal (opt / twist)
-│                         │    ├── RightThumbIntermediate (opt / twist)
 │                         │    ├── RightThumbDistal (opt / twist)
 │                         │    └── RightThumbTip (opt)
 │                         ├── RightIndex
+│                         │    ├── RightIndexMetacarpal (opt / uncommon)
 │                         │    ├── RightIndexProximal (opt / twist)
 │                         │    ├── RightIndexIntermediate (opt / twist)
 │                         │    ├── RightIndexDistal (opt / twist)
 │                         │    └── RightIndexTip (opt)
 │                         ├── RightMiddle
+│                         │    ├── RightMiddleMetacarpal (opt / uncommon)
 │                         │    ├── RightMiddleProximal (opt / twist)
 │                         │    ├── RightMiddleIntermediate (opt / twist)
 │                         │    ├── RightMiddleDistal (opt / twist)
 │                         │    └── RightMiddleTip (opt)
 │                         ├── RightRing
+│                         │    ├── RightRingMetacarpal (opt / uncommon)
 │                         │    ├── RightRingProximal (opt / twist)
 │                         │    ├── RightRingIntermediate (opt / twist)
 │                         │    ├── RightRingDistal (opt / twist)
 │                         │    └── RightRingTip (opt)
 │                         └── RightPinky
+│                              ├── RightPinkyMetacarpal (opt / uncommon)
 │                              ├── RightPinkyProximal (opt / twist)
 │                              ├── RightPinkyIntermediate (opt / twist)
 │                              ├── RightPinkyDistal (opt / twist)
