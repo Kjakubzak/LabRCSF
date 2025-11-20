@@ -81,6 +81,3 @@ RightLowerLeg,RKnee,RightLeg,rtibia,rightLowerLeg,tibia_r,RLeg,RLeg,RightLeg,Cal
 RightFoot,RFoot,RightFoot,rfoot,rightFoot,foot_r,RFoot,RFoot,RightFoot,Foot_R,RightFoot,
 RightToes,RToes,EndSite,rtoes,rightToes,opt,-,RightToeBase,Toe_R (opt),RightToes (opt),,
 RightTip,RTip,-,-,rightTip,opt,-,RTip,-,RightTip (opt),,
-
-
-

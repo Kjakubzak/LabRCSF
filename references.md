@@ -5,8 +5,9 @@ This document lists the primary documentation sources for each skeletal format a
 ## OpenUSD (Universal Scene Description)
 
 **Official Documentation:**
+
 - UsdSkel API Documentation - https://openusd.org/dev/api/usd_skel_page_front.html
-- UsdSkel Introduction - https://openusd.org/dev/api/_usd_skel__intro.html  
+- UsdSkel Introduction - https://openusd.org/dev/api/_usd_skel__intro.html
 - UsdSkel API Introduction - https://openusd.org/dev/api/_usd_skel__a_p_i__intro.html
 - UsdSkel Schemas In-Depth - https://openusd.org/dev/api/_usd_skel__schemas.html
 - UsdSkel Schema Overview - https://openusd.org/dev/api/_usd_skel__schema_overview.html
@@ -17,12 +18,14 @@ This document lists the primary documentation sources for each skeletal format a
 ## VRM (Virtual Reality Model)
 
 **Official Documentation:**
+
 - VRM Official Website - https://vrm.dev/en/
 - VRM Consortium - https://vrm-consortium.org/en/
-- GitHub Specification Repository - https://github.com/vrm-c/vrm-specification *(referenced in search results but requires direct access)*
+- GitHub Specification Repository - https://github.com/vrm-c/vrm-specification _(referenced in search results but requires direct access)_
 - Library of Congress Format Description - https://www.loc.gov/preservation/digital/formats/fdd/fdd000564.shtml
 
 **Third-Party Documentation:**
+
 - Converting an avatar to VRM format (Community Guide) - https://gist.github.com/emilianavt/51d8399987d67544fdebfe2ebd9a5149
 - Animaze VRM Integration Documentation - https://www.animaze.us/manual/vrmavatar/vrmanimations
 
@@ -31,6 +34,7 @@ This document lists the primary documentation sources for each skeletal format a
 ## HAnim (Humanoid Animation)
 
 **Official Documentation:**
+
 - HAnim Working Group (Web3D Consortium) - https://www.web3d.org/working-groups/hanim
 - All HAnim Standards - https://www.web3d.org/new/standards/hanim
 - HAnim Architecture V2 - https://www.web3d.org/content/hanim-architecture-v2
@@ -38,7 +42,8 @@ This document lists the primary documentation sources for each skeletal format a
 - HAnim GitHub Repository - https://github.com/x3d/HumanoidAnimation
 
 **Standards Reference:**
-- ISO/IEC 19774 - Humanoid Animation (H-Anim) *(ISO standard, requires purchase)*
+
+- ISO/IEC 19774 - Humanoid Animation (H-Anim) _(ISO standard, requires purchase)_
 - ISO/IEC 19775-1 X3D Component 26 Humanoid Animation (HAnim)
 
 **Description:** HAnim supports a wide variety of articulated figures, including anatomically correct human models, incorporating haptic and kinematic interfaces in order to enable sharable skeletons, bodies and animations.
@@ -46,11 +51,13 @@ This document lists the primary documentation sources for each skeletal format a
 ## SMPL-X (Statistical Multi-Person Linear Model eXpressive)
 
 **Official Documentation:**
+
 - SMPL-X Website (MPI-IS) - https://smpl-x.is.tue.mpg.de (model downloads, licenses, and integration materials)
 - GitHub Repository: vchoutas/smplx - https://github.com/vchoutas/smplx (official implementation, parameters, installation)
 - SMPL-X Model License - https://smpl-x.is.tue.mpg.de/license (non-commercial/academic terms)
 
 **Academic Publications:**
+
 - Pavlakos et al. "Expressive Body Capture: 3D Hands, Face, and Body from a Single Image" (CVPR 2019) - https://arxiv.org/abs/1904.05866
 
 **Description:** SMPL-X extends the SMPL body model with fully articulated hands and an expressive face, enabling unified modeling of body pose, hand gestures, and facial expressions. The model supports 127 joints total (24 body + 30 hand + 51 face + 22 additional articulation).
@@ -58,6 +65,7 @@ This document lists the primary documentation sources for each skeletal format a
 ## BVH (Biovision Hierarchy)
 
 **Primary Documentation:**
+
 - Wikipedia — Biovision Hierarchy - https://en.wikipedia.org/wiki/Biovision_Hierarchy (general overview, structure, and adoption)
 - FileFormat.com — BVH File Format - https://www.fileformat.com/3d/bvh (technical description and software integration)
 - CityU Technical Reference - http://www.cs.cityu.edu.hk/~howard/Teaching/CS4185-5185-2007B/Group12/BVH.html (hierarchical structure documentation)
@@ -67,6 +75,7 @@ This document lists the primary documentation sources for each skeletal format a
 ## ASF/AMC (Acclaim Skeleton + Motion Capture Format)
 
 **Primary Documentation:**
+
 - University Format Overview - http://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/ASF-AMC.html (Acclaim format skeleton + motion structure)
 - Carnegie Mellon Documentation - http://graphics.cs.cmu.edu (CMU Graphics Lab motion capture database)
 - Wikipedia - List of Motion and Gesture File Formats (ASF/AMC file pair description)
@@ -74,6 +83,7 @@ This document lists the primary documentation sources for each skeletal format a
 - Darwin 3D Academic Specification - ResearchGate (mocap file formats overview, Euler conventions)
 
 **Tool-Specific Documentation:**
+
 - Autodesk MotionBuilder Limitations - Autodesk Help (import/export quirks, SphericXYZ rotation order limitations)
 
 **Description:** ASF/AMC separates skeleton definition (.ASF) from motion data (.AMC). ASF files contain joint hierarchy, degrees of freedom, and bone lengths, while AMC files contain time-series animation data for the defined skeleton.
@@ -81,12 +91,14 @@ This document lists the primary documentation sources for each skeletal format a
 ## Mixamo
 
 **Primary Documentation:**
+
 - Mixamo Website (Adobe) - https://www.mixamo.com (Auto-Rigger, animation store, service documentation)
 - Epic Games Unreal Engine Integration - https://docs.unrealengine.com (Mixamo Content usage, animation retargeting guides)
 
 **Integration Documentation:**
+
 - Omniverse Integration Tutorials - NVIDIA Developer documentation
-- Blender Integration Guides - Community tutorials for Mixamo-to-Blender workflows  
+- Blender Integration Guides - Community tutorials for Mixamo-to-Blender workflows
 - Ready Player Me Integration - https://docs.readyplayer.me (avatar system integration with Mixamo)
 
 **Description:** Mixamo provides cloud-based auto-rigging and animation services with a standardized skeletal structure optimized for automated motion retargeting across diverse character models.
@@ -94,10 +106,12 @@ This document lists the primary documentation sources for each skeletal format a
 ## UE Mannequin (Unreal Engine)
 
 **Primary Documentation:**
+
 - Unreal Engine Documentation - https://docs.unrealengine.com/skeletons (Skeletal hierarchy, skeleton assets, skeletal mesh assets)
 - Epic Games Developer Community - https://dev.epicgames.com (Skeletal Editor tutorials, IK setup, bone structure guides)
 
 **Community Documentation:**
+
 - Epic Games Forums - Developer community discussions on mannequin bone structure and usage
 - Reddit Community Insights - Community explanations of mannequin purpose and animation retargeting
 
@@ -106,10 +120,12 @@ This document lists the primary documentation sources for each skeletal format a
 ## Unity Mecanim
 
 **Primary Documentation:**
+
 - Unity Manual - https://docs.unity3d.com/Manual/MecanimAnimationSystem.html (Mecanim Animation System, humanoid rig setup, retargeting)
 - Unity Developer Blog - Unity blog posts on Mecanim humanoid technology and implementation details
 
-**Integration Documentation:**  
+**Integration Documentation:**
+
 - AAAnimators Tutorials - https://aaanimators.com (Unity avatar mapping, humanoid setup guides)
 - Unity Learn Platform - Official Unity tutorials on avatar definitions and humanoid mapping
 

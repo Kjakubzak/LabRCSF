@@ -21,7 +21,7 @@ This framework provides synthesis-based solutions through comprehensive intermed
 ### Validate each of the format descriptions:
 
 - [ ] OpenUSD - Pixar Universal Scene Description skeletal framework
-- [ ] VRM - VRoid humanoid avatar specification  
+- [ ] VRM - VRoid humanoid avatar specification
 - [ ] HAnim - Web3D Consortium humanoid animation standard
 - [ ] SMPL-X - Statistical Multi-Person Linear model eXpressive
 - [ ] BVH - Biovision Hierarchy motion capture format
@@ -55,21 +55,21 @@ This framework provides synthesis-based solutions through comprehensive intermed
 
 ### Technical
 
-- [X] How should twist bones be handled in minimal target formats?
-    - **Resolved**: incorporate description into the main text.
-    - Diagrams would be good to incorporate.
-    - A twist joint (sometimes called a roll or twist bone) is a helper joint inserted along a limb — usually the upper arm, forearm, thigh, or calf — to distribute rotational deformation (especially twisting around the bone’s primary axis) more naturally across the mesh. ${Twist}_{Rotation} = {Parent}_{Rotation} * {Twist}_{Weight}$
-- [X] Should facial expression joints use standardized blendshape names?
-    - **Resolved**: In future development, we could provide guidance on how the face joints (which are pseudo-skin/muscle clusters) that they map in some manner to FACS. Specifying FACS is out of scope, but referencing it canonically is in scope.
+- [x] How should twist bones be handled in minimal target formats?
+  - **Resolved**: incorporate description into the main text.
+  - Diagrams would be good to incorporate.
+  - A twist joint (sometimes called a roll or twist bone) is a helper joint inserted along a limb — usually the upper arm, forearm, thigh, or calf — to distribute rotational deformation (especially twisting around the bone’s primary axis) more naturally across the mesh. ${Twist}_{Rotation} = {Parent}_{Rotation} * {Twist}_{Weight}$
+- [x] Should facial expression joints use standardized blendshape names?
+  - **Resolved**: In future development, we could provide guidance on how the face joints (which are pseudo-skin/muscle clusters) that they map in some manner to FACS. Specifying FACS is out of scope, but referencing it canonically is in scope.
     Facial expressions in general are going to be a combination of joints and blendshapes.
     Breaking out expressions as a future topic seems like a strong direction.
 - [ ] What constitutes acceptable quality loss during downward conversion?
 - [ ] What validation metrics best assess cross-format conversion quality?
-- [X] Should there be performance tiers for different hardware capabilities?
-    - **Resolved**: An avatar can use a cluster geometry for hierarchy (like a suit of armor), or it can be skin-cluster weighted.
-    - We can describe common techniques as informative text.
-    - Skeletal LODs define subsets of bones.
-    - The hierarchy definition can show how Skeletal subsets map to the canonical hierarchy. We could provide guidance as to common methods for delegating functionality to articulation schemes within the same hierarchy.
+- [x] Should there be performance tiers for different hardware capabilities?
+  - **Resolved**: An avatar can use a cluster geometry for hierarchy (like a suit of armor), or it can be skin-cluster weighted.
+  - We can describe common techniques as informative text.
+  - Skeletal LODs define subsets of bones.
+  - The hierarchy definition can show how Skeletal subsets map to the canonical hierarchy. We could provide guidance as to common methods for delegating functionality to articulation schemes within the same hierarchy.
 
 ### Compatiblity
 
@@ -80,13 +80,12 @@ This framework provides synthesis-based solutions through comprehensive intermed
 
 - [ ] What governance model ensures long-term framework evolution?
 
-
-
 ## License
 
 Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. You are free to share and adapt this material for any purpose, even commercially, under the following terms:
+
 - **Attribution** - You must give appropriate credit and indicate if changes were made
 - **ShareAlike** - If you remix, transform, or build upon the material, you must distribute your contributions under the same license
 
