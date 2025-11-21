@@ -1,8 +1,8 @@
 # Reference Canonical Skeleton Framework: A Metaverse Standards Forum Proposal for Humanoid Skeletal Interoperability
 
-**Submitted to:** Metaverse Standards Forum  
+**Submitted to:** Metaverse Standards Forum
 **Authors:** Nick Porcino
-**Date:** 2025 August 27 
+**Date:** 2025 August 27
 **Version:** 1.0
 
 ## Executive Summary
@@ -165,26 +165,30 @@ Hips / Pelvis (ROOT)
 │     │              ├── LeftLowerArmTwist (opt / twist)
 │     │              └── LeftHand
 │     │                   ├── LeftThumb
+│     │                   │    ├── LeftThumbMetacarpal (opt / twist)
 │     │                   │    ├── LeftThumbProximal (opt / twist)
-│     │                   │    ├── LeftThumbIntermediate (opt / twist)
 │     │                   │    ├── LeftThumbDistal (opt / twist)
 │     │                   │    └── LeftThumbTip (opt)
 │     │                   ├── LeftIndex
+│     │                   │    ├── LeftIndexMetacarpal (opt / uncommon)
 │     │                   │    ├── LeftIndexProximal (opt / twist)
 │     │                   │    ├── LeftIndexIntermediate (opt / twist)
 │     │                   │    ├── LeftIndexDistal (opt / twist)
 │     │                   │    └── LeftIndexTip (opt)
 │     │                   ├── LeftMiddle
+│     │                   │    ├── LeftMiddleMetacarpal (opt / uncommon)
 │     │                   │    ├── LeftMiddleProximal (opt / twist)
 │     │                   │    ├── LeftMiddleIntermediate (opt / twist)
 │     │                   │    ├── LeftMiddleDistal (opt / twist)
 │     │                   │    └── LeftMiddleTip (opt)
 │     │                   ├── LeftRing
+│     │                   │    ├── LeftRingMetacarpal (opt / uncommon)
 │     │                   │    ├── LeftRingProximal (opt / twist)
 │     │                   │    ├── LeftRingIntermediate (opt / twist)
 │     │                   │    ├── LeftRingDistal (opt / twist)
 │     │                   │    └── LeftRingTip (opt)
 │     │                   └── LeftPinky
+│     │                        ├── LeftPinkyMetacarpal (opt / uncommon)
 │     │                        ├── LeftPinkyProximal (opt / twist)
 │     │                        ├── LeftPinkyIntermediate (opt / twist)
 │     │                        ├── LeftPinkyDistal (opt / twist)
@@ -196,26 +200,30 @@ Hips / Pelvis (ROOT)
 │                    ├── RightLowerArmTwist (opt / twist)
 │                    └── RightHand
 │                         ├── RightThumb
+│                         │    ├── RightThumbMetacarpal (opt / twist)
 │                         │    ├── RightThumbProximal (opt / twist)
-│                         │    ├── RightThumbIntermediate (opt / twist)
 │                         │    ├── RightThumbDistal (opt / twist)
 │                         │    └── RightThumbTip (opt)
 │                         ├── RightIndex
+│                         │    ├── RightIndexMetacarpal (opt / uncommon)
 │                         │    ├── RightIndexProximal (opt / twist)
 │                         │    ├── RightIndexIntermediate (opt / twist)
 │                         │    ├── RightIndexDistal (opt / twist)
 │                         │    └── RightIndexTip (opt)
 │                         ├── RightMiddle
+│                         │    ├── RightMiddleMetacarpal (opt / uncommon)
 │                         │    ├── RightMiddleProximal (opt / twist)
 │                         │    ├── RightMiddleIntermediate (opt / twist)
 │                         │    ├── RightMiddleDistal (opt / twist)
 │                         │    └── RightMiddleTip (opt)
 │                         ├── RightRing
+│                         │    ├── RightRingMetacarpal (opt / uncommon)
 │                         │    ├── RightRingProximal (opt / twist)
 │                         │    ├── RightRingIntermediate (opt / twist)
 │                         │    ├── RightRingDistal (opt / twist)
 │                         │    └── RightRingTip (opt)
 │                         └── RightPinky
+│                              ├── RightPinkyMetacarpal (opt / uncommon)
 │                              ├── RightPinkyProximal (opt / twist)
 │                              ├── RightPinkyIntermediate (opt / twist)
 │                              ├── RightPinkyDistal (opt / twist)
@@ -239,21 +247,27 @@ Hips / Pelvis (ROOT)
 ## Joint Classification System
 
 ### Core Joints
+
 Essential humanoid skeleton compatible with all analyzed standards. These joints must be present for valid RCSF representation:
+
 - Hips (root)
 - Spine, Chest, Neck, Head
 - Left/Right Clavicle, UpperArm, LowerArm, Hand
 - Left/Right UpperLeg, LowerLeg, Foot
 
 ### Optional Joints (opt)
+
 Joints that enhance detail but are not required for basic humanoid functionality. Optional joints enable high-fidelity representation while maintaining compatibility with simplified target formats:
+
 - UpperChest: Additional spinal articulation for enhanced torso deformation
 - Facial features: Eyes, jaw, lips, cheeks, nose, ears, brow for expression control
 - Finger segments: Detailed finger articulation beyond basic hand representation
 - Toe segments: Foot detail beyond basic foot representation
 
 ### Twist Bones (twist)
+
 Intermediate joints that improve deformation quality without altering base skeletal topology. Twist bones address limb deformation artifacts by providing additional control points along bone segments:
+
 - UpperArmTwist/LowerArmTwist: Improve arm deformation during forearm rotation
 - UpperLegTwist/LowerLegTwist: Enhance leg deformation during hip and knee articulation
 - Finger twist bones: Provide enhanced finger deformation for high-fidelity hand animation
@@ -269,11 +283,13 @@ T_world(joint) = T_world(parent) × T_local(joint)
 ```
 
 For a joint chain from root to end-effector:
+
 ```
 T_world(end) = T_root × T_joint1 × T_joint2 × ... × T_jointN
 ```
 
 Where each local transformation matrix combines translation, rotation, and scale:
+
 ```
 T_local = Translation × Rotation × Scale
 ```
@@ -290,6 +306,7 @@ T = [R11  R12  R13  Tx ]
 ```
 
 Where:
+
 - **R** is the 3×3 rotation matrix
 - **T** is the translation vector (Tx, Ty, Tz)
 - Scale is incorporated into the rotation matrix for uniform scaling
@@ -301,16 +318,19 @@ The inverse base pose represents the transformation required to convert from the
 **Base Pose Definition**: The canonical rest position where all joint rotations are zero and the skeleton assumes anatomically neutral positioning.
 
 **Inverse Base Pose Calculation**:
+
 ```
 T_inverse_base(joint) = T_base(joint)^(-1)
 ```
 
 **Application to Target Format**:
+
 ```
 T_target = T_inverse_base × T_RCSF × T_target_base
 ```
 
 This transformation sequence:
+
 1. Converts from target base pose to neutral space
 2. Applies RCSF transformations
 3. Converts to target format's expected base pose
@@ -320,11 +340,13 @@ This transformation sequence:
 #### Joint Orientation Alignment
 
 Different formats use varying local coordinate systems for joints. The RCSF uses consistent anatomical orientation:
+
 - **X-axis**: Points along bone length (distal direction)
 - **Y-axis**: Points toward anatomical "up" direction
 - **Z-axis**: Completes right-handed coordinate system
 
 When converting to target formats with different joint orientations:
+
 ```python
 def align_joint_orientation(RCSF_transform, target_orientation):
     alignment_matrix = calculate_alignment(RCSF_axes, target_axes)
@@ -334,6 +356,7 @@ def align_joint_orientation(RCSF_transform, target_orientation):
 #### Rotation Order Conversion
 
 RCSF uses XYZ Euler rotation order internally. For target formats using different orders:
+
 ```python
 def convert_rotation_order(rotation_xyz, target_order):
     # Convert to rotation matrix
@@ -355,7 +378,7 @@ def map_joint_name(canonical_joint, target_format):
     """
     mapping_row = csv_table.find_row(canonical_joint)
     target_name = mapping_row[target_format + '_column']
-    
+
     if target_name == '-' or target_name == 'opt':
         return None  # Joint not supported in target format
     elif target_name == 'EndSite':
@@ -369,6 +392,7 @@ def map_joint_name(canonical_joint, target_format):
 When target formats lack specific joints present in source data:
 
 **Optional Joint Exclusion**:
+
 ```python
 def filter_optional_joints(joint_list, target_format_capabilities):
     required_joints = get_required_joints_for_format(target_format_capabilities)
@@ -376,6 +400,7 @@ def filter_optional_joints(joint_list, target_format_capabilities):
 ```
 
 **Parent Chain Collapse**:
+
 ```python
 def collapse_missing_joints(parent_joint, missing_joint, child_joint):
     """
@@ -392,6 +417,7 @@ def collapse_missing_joints(parent_joint, missing_joint, child_joint):
 When source formats contain joints not present in RCSF canonical set:
 
 **Multiple Spine Joints**:
+
 ```python
 def map_multiple_spine_joints(spine_joints):
     """
@@ -401,8 +427,8 @@ def map_multiple_spine_joints(spine_joints):
         return {'Spine': spine_joints[0], 'Chest': spine_joints[1]}
     elif len(spine_joints) == 3:
         return {
-            'Spine': spine_joints[0], 
-            'Chest': spine_joints[1], 
+            'Spine': spine_joints[0],
+            'Chest': spine_joints[1],
             'UpperChest': spine_joints[2]
         }
     else:
@@ -411,6 +437,7 @@ def map_multiple_spine_joints(spine_joints):
 ```
 
 **Twist Bone Inference**:
+
 ```python
 def detect_twist_bones(joint_hierarchy):
     """
@@ -418,12 +445,12 @@ def detect_twist_bones(joint_hierarchy):
     """
     twist_patterns = ['twist', 'roll', 'turn', '_01', '_02']
     twist_bones = []
-    
+
     for joint in joint_hierarchy:
         if any(pattern in joint.name.lower() for pattern in twist_patterns):
             if is_intermediate_joint(joint):  # Between major joints
                 twist_bones.append(joint)
-    
+
     return twist_bones
 ```
 
@@ -432,6 +459,7 @@ def detect_twist_bones(joint_hierarchy):
 ### Anatomical Consistency Validation
 
 **Bone Length Ratio Verification**:
+
 ```python
 def validate_bone_proportions(skeleton):
     """
@@ -439,7 +467,7 @@ def validate_bone_proportions(skeleton):
     """
     ratios = calculate_bone_length_ratios(skeleton)
     anatomical_bounds = load_anthropometric_data()
-    
+
     for bone_pair, ratio in ratios.items():
         min_bound, max_bound = anatomical_bounds[bone_pair]
         if not (min_bound <= ratio <= max_bound):
@@ -447,6 +475,7 @@ def validate_bone_proportions(skeleton):
 ```
 
 **Kinematic Constraint Checking**:
+
 ```python
 def validate_joint_constraints(skeleton):
     """
@@ -463,6 +492,7 @@ def validate_joint_constraints(skeleton):
 ### Conversion Quality Metrics
 
 **Information Preservation Measurement**:
+
 ```python
 def calculate_information_preservation(source_skeleton, converted_skeleton):
     """
@@ -470,10 +500,10 @@ def calculate_information_preservation(source_skeleton, converted_skeleton):
     """
     source_joints = set(source_skeleton.joint_names)
     converted_joints = set(converted_skeleton.joint_names)
-    
+
     preserved_ratio = len(source_joints & converted_joints) / len(source_joints)
     added_ratio = len(converted_joints - source_joints) / len(source_joints)
-    
+
     return {
         'preservation_ratio': preserved_ratio,
         'enhancement_ratio': added_ratio,
@@ -482,28 +512,29 @@ def calculate_information_preservation(source_skeleton, converted_skeleton):
 ```
 
 **Animation Fidelity Assessment**:
+
 ```python
 def assess_animation_quality(original_motion, retargeted_motion):
     """
     Compare motion characteristics before and after retargeting
     """
     metrics = {}
-    
+
     # Joint angle correlation
     metrics['joint_correlation'] = calculate_joint_angle_correlation(
         original_motion, retargeted_motion
     )
-    
+
     # End-effector position accuracy
     metrics['position_error'] = calculate_end_effector_error(
         original_motion, retargeted_motion
     )
-    
+
     # Motion smoothness preservation
     metrics['smoothness_preservation'] = calculate_smoothness_metric(
         original_motion, retargeted_motion
     )
-    
+
     return metrics
 ```
 
@@ -512,6 +543,7 @@ def assess_animation_quality(original_motion, retargeted_motion):
 ### Level-of-Detail Implementation
 
 **Joint Subset Selection**:
+
 ```python
 def select_lod_joints(skeleton, target_performance_level):
     """
@@ -526,31 +558,33 @@ def select_lod_joints(skeleton, target_performance_level):
 ```
 
 **Twist Bone Optimization**:
+
 ```python
 def optimize_twist_bones(skeleton, performance_budget):
     """
     Selectively enable twist bones based on visual impact and performance cost
     """
     twist_bones = skeleton.get_twist_bones()
-    
+
     # Sort by visual impact (arms > legs > fingers)
     priority_order = sort_by_visual_impact(twist_bones)
-    
+
     enabled_twist_bones = []
     current_cost = 0
-    
+
     for twist_bone in priority_order:
         bone_cost = calculate_processing_cost(twist_bone)
         if current_cost + bone_cost <= performance_budget:
             enabled_twist_bones.append(twist_bone)
             current_cost += bone_cost
-    
+
     return enabled_twist_bones
 ```
 
 ### Error Handling and Fallback Strategies
 
 **Graceful Degradation**:
+
 ```python
 def convert_with_fallback(source_skeleton, target_format):
     try:
@@ -563,7 +597,6 @@ def convert_with_fallback(source_skeleton, target_format):
         log_conversion_error(e)
         return create_minimal_skeleton(target_format)
 ```
-
 
 ## Implementation Scope and Limitations
 
@@ -579,6 +612,7 @@ This appendix addresses **homogeneous humanoid skeleton** conversion—transform
 ### Excluded Scenarios
 
 **Heterogeneous Rig Transfer**: Conversion between fundamentally different anatomical structures (human ↔ quadruped, human ↔ mechanical robot, adult ↔ infant) requires separate approaches involving:
+
 - Anatomical topology translation
 - Proportional adaptation algorithms
 - Functional role remapping
@@ -612,8 +646,7 @@ Standards were selected to provide comprehensive coverage across three primary a
 - Motion Capture Formats
 - Real-Time Rendering Systems
 - Research and Analysis Standards
-- 
-This selection encompasses the major technical paradigms and operational contexts that drive humanoid skeletal system design across contemporary digital content production, ensuring that RCSF synthesis reflects practical industry requirements rather than theoretical completeness.
+- This selection encompasses the major technical paradigms and operational contexts that drive humanoid skeletal system design across contemporary digital content production, ensuring that RCSF synthesis reflects practical industry requirements rather than theoretical completeness.
 
 ### Analytical Framework Development
 
@@ -680,6 +713,6 @@ The complete technical analysis, including individual standard specifications, c
 The paper provides:
 
 - **Individual Standard Analysis**: Comprehensive technical specifications, architectural analysis, and operational context assessment for each of the ten analyzed standards
-- **Complete Mapping Tables**: Detailed semantic correspondence tables enabling algorithmic cross-format conversion with quality assessment capabilities  
+- **Complete Mapping Tables**: Detailed semantic correspondence tables enabling algorithmic cross-format conversion with quality assessment capabilities
 - **Conversion Algorithm Specifications**: Technical implementation guidance for automated mapping systems including heuristic strategies, validation frameworks, and performance optimization approaches
 - **Research Methodology Documentation**: Systematic analytical frameworks and evaluation criteria that support continued research and community validation of interoperability approaches
