@@ -158,7 +158,7 @@ Hips / Pelvis (ROOT)
 │     │        │    ├── LeftLipCorner (opt)
 │     │        │    └── RightLipCorner (opt)
 │     │        └── Brow (opt)
-│     ├── LeftClavicle
+│     ├── LeftShoulder
 │     │    └── LeftUpperArm
 │     │         ├── LeftUpperArmTwist (opt / twist)
 │     │         └── LeftLowerArm
@@ -193,7 +193,7 @@ Hips / Pelvis (ROOT)
 │     │                        ├── LeftPinkyIntermediate (opt / twist)
 │     │                        ├── LeftPinkyDistal (opt / twist)
 │     │                        └── LeftPinkyTip (opt)
-│     └── RightClavicle
+│     └── RightShoulder
 │          └── RightUpperArm
 │               ├── RightUpperArmTwist (opt / twist)
 │               └── RightLowerArm
@@ -252,7 +252,7 @@ Essential humanoid skeleton compatible with all analyzed standards. These joints
 
 - Hips (root)
 - Spine, Chest, Neck, Head
-- Left/Right Clavicle, UpperArm, LowerArm, Hand
+- Left/Right Shoulder, UpperArm, LowerArm, Hand
 - Left/Right UpperLeg, LowerLeg, Foot
 
 ### Optional Joints (opt)

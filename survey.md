@@ -208,7 +208,7 @@ The OpenUSD specification's comprehensive joint set creates mapping asymmetries 
 
 - **Facial detail reduction**: Most target formats lack equivalent eyelid/lip articulation, requiring selective joint exclusion or proxy mapping
 - **Finger complexity**: Four-segment finger chains exceed typical three-segment implementations, necessitating intermediate joint interpolation or end-effector mapping
-- **Naming convention translation**: Descriptive identifiers require systematic conversion to target format conventions (e.g., "LShldr" → "LeftClavicle" → "leftShoulder")
+- **Naming convention translation**: Descriptive identifiers require systematic conversion to target format conventions (e.g., "LShldr" → "LeftShoulder" → "leftShoulder")
 
 **Pipeline Integration Strengths**:
 
@@ -1736,7 +1736,7 @@ Root
 | LeftLipCorner              | LLipCorner              | -               | -                  | -                       | opt          | -        | LLipCorner    | opt             | opt                 | -                       | -                       |
 | RightLipCorner             | RLipCorner              | -               | -                  | -                       | opt          | -        | RLipCorner    | opt             | opt                 | -                       | -                       |
 | Brow                       | LBrow / Brow            | -               | -                  | -                       | opt          | -        | LBrow / RBrow | opt             | opt                 | -                       | -                       |
-| LeftClavicle               | LShldr                  | LeftShoulder    | lclavicle          | leftShoulder            | clavicle_l   | LShldr   | LShldr        | LeftShoulder    | Clavicle_L          | LeftShoulder            | LeftShoulder            |
+| LeftShoulder               | LShldr                  | LeftShoulder    | lclavicle          | leftShoulder            | clavicle_l   | LShldr   | LShldr        | LeftShoulder    | Clavicle_L          | LeftShoulder            | LeftShoulder            |
 | LeftUpperArm               | LArm                    | LeftArm         | lhumerus           | leftUpperArm            | humerus_l    | LArm     | LArm          | LeftArm         | UpperArm_L          | LeftUpperArm            | LeftUpperArm            |
 | LeftLowerArm               | LElbow                  | LeftForeArm     | lradius            | leftLowerArm            | radius_l     | LForeArm | LForeArm      | LeftForeArm     | LowerArm_L          | LeftLowerArm            | LeftLowerArm            |
 | LeftHand                   | LHand                   | LeftHand        | lwrist             | leftHand                | hand_l       | LHand    | LHand         | LeftHand        | Hand_L              | LeftHand                | LeftHand                |
@@ -1764,7 +1764,7 @@ Root
 | LeftPinkyIntermediate      | LPinkyMid               | -               | -                  | leftLittleIntermediate  | opt          | -        | LPinkyMid     | LPinkyMid       | opt                 | LeftLittleIntermediate  | LeftLittleIntermediate  |
 | LeftPinkyDistal            | LPinkyTip               | -               | -                  | leftLittleDistal        | opt          | -        | LPinkyTip     | LPinkyTip       | opt                 | LeftLittleDistal        | LeftLittleDistal        |
 | LeftPinkyTip               | LPinkyEnd               | -               | -                  | -                       | opt          | -        | LPinkyEnd     | LPinkyEnd       | opt                 | -                       | -                       |
-| RightClavicle              | RShldr                  | RightShoulder   | rclavicle          | rightShoulder           | clavicle_r   | RShldr   | RShldr        | RightShoulder   | Clavicle_R          | RightShoulder           | RightShoulder           |
+| RightShoulder              | RShldr                  | RightShoulder   | rclavicle          | rightShoulder           | clavicle_r   | RShldr   | RShldr        | RightShoulder   | Clavicle_R          | RightShoulder           | RightShoulder           |
 | RightUpperArm              | RArm                    | RightArm        | rhumerus           | rightUpperArm           | humerus_r    | RArm     | RArm          | RightArm        | UpperArm_R          | RightUpperArm           | RightUpperArm           |
 | RightLowerArm              | RElbow                  | RightForeArm    | rradius            | rightLowerArm           | radius_r     | RForeArm | RForeArm      | RightForeArm    | LowerArm_R          | RightLowerArm           | RightLowerArm           |
 | RightHand                  | RHand                   | RightHand       | rwrist             | rightHand               | hand_r       | RHand    | RHand         | RightHand       | Hand_R              | RightHand               | RightHand               |
@@ -1875,7 +1875,7 @@ Hips / Pelvis
 │     │        │    ├─ LeftLipCorner (opt)
 │     │        │    └─ RightLipCorner (opt)
 │     │        └─ Brow (opt)
-│     ├─ LeftClavicle
+│     ├─ LeftShoulder
 │     │    └─ LeftUpperArm
 │     │         └─ LeftLowerArm
 │     │              └─ LeftHand
@@ -1908,7 +1908,7 @@ Hips / Pelvis
 │     │                        ├─ LeftPinkyIntermediate (opt / twist)
 │     │                        ├─ LeftPinkyDistal (opt / twist)
 │     │                        └─ LeftPinkyTip (opt)
-│     └─ RightClavicle
+│     └─ RightShoulder
 │          └─ RightUpperArm
 │               └─ RightLowerArm
 │                    └─ RightHand
@@ -2065,7 +2065,7 @@ LowerLip,LoLip / LLoLip / RLoLip,-,-,-,opt,-,LoLip,opt,opt,-,-
 LeftLipCorner,LLipCorner,-,-,-,opt,-,LLipCorner,opt,opt,-,-
 RightLipCorner,RLipCorner,-,-,-,opt,-,RLipCorner,opt,opt,-,-
 Brow,LBrow / Brow,-,-,-,opt,-,LBrow / RBrow,opt,opt,-,-
-LeftClavicle,LShldr,LeftShoulder,lclavicle,leftShoulder,clavicle_l,LShldr,LShldr,LeftShoulder,Clavicle_L,LeftShoulder,LeftShoulder
+LeftShoulder,LShldr,LeftShoulder,lclavicle,leftShoulder,clavicle_l,LShldr,LShldr,LeftShoulder,Clavicle_L,LeftShoulder,LeftShoulder
 LeftUpperArm,LArm,LeftArm,lhumerus,leftUpperArm,humerus_l,LArm,LArm,LeftArm,UpperArm_L,LeftUpperArm,LeftUpperArm
 LeftLowerArm,LElbow,LeftForeArm,lradius,leftLowerArm,radius_l,LForeArm,LForeArm,LeftForeArm,LowerArm_L,LeftLowerArm,LeftLowerArm
 LeftHand,LHand,LeftHand,lwrist,leftHand,hand_l,LHand,LHand,LeftHand,Hand_L,LeftHand,LeftHand
@@ -2093,7 +2093,7 @@ LeftPinkyProximal,LPinky,-,lpinky,leftLittleProximal,opt,-,LPinky,LPinky,opt,Lef
 LeftPinkyIntermediate,LPinkyMid,-,-,leftLittleIntermediate,opt,-,LPinkyMid,LPinkyMid,opt,LeftLittleIntermediate,LeftLittleIntermediate
 LeftPinkyDistal,LPinkyTip,-,-,leftLittleDistal,opt,-,LPinkyTip,LPinkyTip,opt,LeftLittleDistal,LeftLittleDistal
 LeftPinkyTip,LPinkyEnd,-,-,-,opt,-,LPinkyEnd,LPinkyEnd,opt,-,-
-RightClavicle,RShldr,RightShoulder,rclavicle,rightShoulder,clavicle_r,RShldr,RShldr,RightShoulder,Clavicle_R,RightShoulder,RightShoulder
+RightShoulder,RShldr,RightShoulder,rclavicle,rightShoulder,clavicle_r,RShldr,RShldr,RightShoulder,Clavicle_R,RightShoulder,RightShoulder
 RightUpperArm,RArm,RightArm,rhumerus,rightUpperArm,humerus_r,RArm,RArm,RightArm,UpperArm_R,RightUpperArm,RightUpperArm
 RightLowerArm,RElbow,RightForeArm,rradius,rightLowerArm,radius_r,RForeArm,RForeArm,RightForeArm,LowerArm_R,RightLowerArm,RightLowerArm
 RightHand,RHand,RightHand,rwrist,rightHand,hand_r,RHand,RHand,RightHand,Hand_R,RightHand,RightHand
