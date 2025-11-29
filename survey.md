@@ -1713,10 +1713,10 @@ Root
 | CanonicalJoint             | OpenUSD                 | BVH             | ASF/AMC            | VRM                     | HAnim        | SMPL     | SMPL-X        | Mixamo          | UEMannequin         | UnityMecanim            | Godot                   |
 | -------------------------- | ----------------------- | --------------- | ------------------ | ----------------------- | ------------ | -------- | ------------- | --------------- | ------------------- | ----------------------- | ----------------------- |
 | Root (Parent of e.g. Hips) | -                       | -               | -                  | root                    | -            | -        | -             | -               | -                   | -                       | Root                    |
-| Hips / Pelvis              | Hips                    | Hips            | pelvis             | hips                    | HumanoidRoot | pelvis   | pelvis        | Hips            | Root (Pelvis)       | Hips                    | Hips                    |
-| Spine / LowerBack          | Torso                   | Spine           | lowerback          | spine                   | lumbosacral  | spine1   | spine1        | Spine           | Spine_01            | Spine                   | Spine                   |
-| Spine / Chest              | Chest                   | Spine1 / Spine2 | upperback / thorax | chest                   | thorax       | spine2   | spine2        | Spine1 / Spine2 | Spine_02 / Spine_03 | Chest                   | Chest                   |
-| UpperChest                 | UpChest                 | -               | -                  | upperChest              | opt          | -        | -             | -               | -                   | UpperChest (opt)        | UpperChest              |
+| Hips                       | Hips                    | Hips            | pelvis             | hips                    | HumanoidRoot | pelvis   | pelvis        | Hips            | Root (Pelvis)       | Hips                    | Hips                    |
+| Spine                      | Torso                   | Spine           | lowerback          | spine                   | lumbosacral  | spine1   | spine1        | Spine           | Spine_01            | Spine                   | Spine                   |
+| Chest                      | Chest                   | Spine1 / Spine2 | upperback / thorax | chest                   | thorax       | spine2   | spine2        | Spine1 / Spine2 | Spine_02 / Spine_03 | Chest                   | Chest                   |
+| Chest1/2/etc               | UpChest                 | -               | -                  | upperChest              | opt          | -        | -             | -               | -                   | UpperChest (opt)        | UpperChest              |
 | Neck                       | Neck                    | Neck            | lowerneck          | neck                    | neck         | neck     | neck          | Neck            | Neck_01             | Neck                    | Neck                    |
 | Head                       | Head                    | Head            | head               | head                    | head         | head     | head          | Head            | Head                | Head                    | Head                    |
 | Jaw                        | -                       | EndSite         | opt                | jaw                     | opt          | opt      | jaw           | opt             | opt                 | Jaw                     | Jaw                     |
@@ -1850,10 +1850,9 @@ Format pairs with similar complexity but different architectural approaches requ
 ## Reference Canonical Skeleton Framework
 
 ```
-Hips / Pelvis
-├─ Spine / LowerBack
-│  └─ Spine / Chest
-│     ├─ UpperChest (opt)
+Hips
+├─ Spine
+│  └─ Chest
 │     ├─ Neck
 │     │   └─ Head
 │     │        ├─ Jaw (opt)
@@ -2033,10 +2032,10 @@ The comprehensive analysis demonstrates that humanoid skeletal interoperability 
 ```csv
 CanonicalJoint,OpenUSD,BVH,ASF/AMC,VRM,HAnim,SMPL,SMPL-X,Mixamo,UEMannequin,UnityMecanim,Godot
 Root (Parent of e.g. Hips),-,-,-,root,-,-,-,-,-,-,Root
-Hips / Pelvis,Hips,Hips,pelvis,hips,HumanoidRoot,pelvis,pelvis,Hips,Root (Pelvis),Hips,Hips
-Spine / LowerBack,Torso,Spine,lowerback,spine,lumbosacral,spine1,spine1,Spine,Spine_01,Spine,Spine
-Spine / Chest,Chest,Spine1 / Spine2,upperback / thorax,chest,thorax,spine2,spine2,Spine1 / Spine2,Spine_02 / Spine_03,Chest,Chest
-UpperChest,UpChest,-,-,upperChest,opt,-,-,-,-,UpperChest (opt),UpperChest
+Hips,Hips,Hips,pelvis,hips,HumanoidRoot,pelvis,pelvis,Hips,Root (Pelvis),Hips,Hips
+Spine,Torso,Spine,lowerback,spine,lumbosacral,spine1,spine1,Spine,Spine_01,Spine,Spine
+Chest,Chest,Spine1 / Spine2,upperback / thorax,chest,thorax,spine2,spine2,Spine1 / Spine2,Spine_02 / Spine_03,Chest,Chest
+Chest1/2/etc,UpChest,-,-,upperChest,opt,-,-,-,-,UpperChest (opt),UpperChest
 Neck,Neck,Neck,lowerneck,neck,neck,neck,neck,Neck,Neck_01,Neck,Neck
 Head,Head,Head,head,head,head,head,head,Head,Head,Head,Head
 Jaw,-,EndSite,opt,jaw,opt,opt,jaw,opt,opt,Jaw,Jaw
