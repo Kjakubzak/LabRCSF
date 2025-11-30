@@ -133,10 +133,9 @@ We invite the Metaverse Standards Forum community to engage with this proposal a
 The Reference Canonical Skeleton Framework incorporates 127 canonical joints organized in a hierarchical structure that preserves anatomical relationships while accommodating the majority of joint types identified across the analyzed standards:
 
 ```
-Hips / Pelvis (ROOT)
-├── Spine / LowerBack
-│  └── Spine / Chest
-│     ├── UpperChest (opt)
+Hips
+├── Spine
+│  └── Chest
 │     ├── Neck
 │     │   └── Head
 │     │        ├── Jaw (opt)
@@ -236,12 +235,11 @@ Hips / Pelvis (ROOT)
 
 ## Joint Classification System
 
-### Core Joints
+### Recommended Joints
 
-Essential humanoid skeleton compatible with all analyzed standards. These joints must be present for valid RCSF representation:
+Essential humanoid skeleton compatible with all analyzed standards. These joints are highly recommended be present for valid RCSF representation:
 
-- Hips (root)
-- Spine, Chest, Neck, Head
+- Hips, Spine, Chest, Neck, Head
 - Left/Right Shoulder, UpperArm, LowerArm, Hand
 - Left/Right UpperLeg, LowerLeg, Foot
 
@@ -249,18 +247,103 @@ Essential humanoid skeleton compatible with all analyzed standards. These joints
 
 Joints that enhance detail but are not required for basic humanoid functionality. Optional joints enable high-fidelity representation while maintaining compatibility with simplified target formats:
 
-- UpperChest: Additional spinal articulation for enhanced torso deformation
 - Facial features: Eyes, jaw, lips, cheeks, nose, ears, brow for expression control
 - Finger segments: Detailed finger articulation beyond basic hand representation
 - Toe segments: Foot detail beyond basic foot representation
 
+### Extended Joints
+
+Optionally, any of the existing joints can be extended into multiple joints to provide enhanced deformation flexibility. These extended joints provide additional articulation points while preserving compatibility with target formats that only support the base joint.
+
+Adding extended joints involves adding new joints as children, named with number-suffixed variants of the base joint name, such as "Spine1", "Spine2", etc. The base joint as implicitly bone "0" in the series, but this MUST NOT be explicitly written: the "0" suffix MUST be omitted, like "Spine". Numbers cannot be skipped, so if "Spine2" is present, then it MUST have a parent named "Spine1", which MUST have a parent named "Spine".
+
+Extended joints are injected into the hierarchy between the base joint and its children, such that the last extended joint becomes the parent of the original children. For example, if "Chest1", "Chest2", and "Chest3" are added, then the hierarchy would be:
+
+```
+Spine
+└── Chest
+     └── Chest1
+          └── Chest2
+               └── Chest3
+                    ├── Neck
+                    │    └── ...
+                    ├── LeftShoulder
+                    │    └── ...
+                    └── RightShoulder
+                         └── ...
+```
+
+Implementations that do not animate or otherwise use the extended joints can simply ignore them, since "Chest1", "Chest2", and "Chest3" will move together with their parent "Chest" joint if not animated separately. All children of the non-extended base joint MUST be placed in the hierarchy as children of the last extended joint. For example, if the last extended chest joint is "Chest3", then "Neck", "LeftShoulder", and "RightShoulder" MUST be children of "Chest3". Placing any of those as children of the non-last joint is invalid.
+
+Extended joints may provide boundless levels of detail to any bones. For example, a character with tentacles for arms may have the upper and lower arm bones split into dozens or hundreds of smaller segments. Implementations which only support basic rigs can safely ignore all extended joints, and move the tentacle arms as if they were normal humanoid arms, since the extended joints will follow the base joint's movement automatically due to being descendants in the hierarchy. Implementations which support extended joints can animate them in any desired manner, for example, a detailed ragdoll simulation with all of the segments free to move independently.
+
 ### Twist Bones (twist)
 
-Intermediate joints that improve deformation quality without altering base skeletal topology. Twist bones address limb deformation artifacts by providing additional control points along bone segments:
+Intermediate joints that improve deformation quality without altering base skeletal topology. All twist joints are optional; a skeleton is allowed to have no twist bones at all. Twist bones address limb deformation artifacts by providing additional control points along bone segments, most commonly:
 
 - UpperArmTwist/LowerArmTwist: Improve arm deformation during forearm rotation
 - UpperLegTwist/LowerLegTwist: Enhance leg deformation during hip and knee articulation
 - Finger twist bones: Provide enhanced finger deformation for high-fidelity hand animation
+
+Unlike extended joints, twist bones are always leaf nodes relative to the rest of the RCSF skeleton hierarchy. For example, "LeftUpperArmTwist" is a child of "LeftUpperArm" and a sibling of "LeftLowerArm". If using extended and twist bones together, the twist bone is always a direct child of the joint it is twisting. For example, "SpineTwist" would be a child of "Spine", "Spine1Twist" would be a child of "Spine1", and so on.
+
+### Medical Human Anatomy Correspondence
+
+When using RCSF to represent realistic human anatomy, or the anatomy of a humanoid bipedal creature, the following medical spine bone mappings SHOULD be used:
+
+- The "Hips" joint corresponds to the Os sacrum bone in the human spine, or the nearest equivalent for non-humans.
+- The "Spine" joint corresponds to the lowest lumbar bone in the human spine, or the nearest equivalent for non-humans.
+  - This means that, in medical terminology, this is the "L5" lumbar spine bone.
+  - If additional lumbar spine bones are included, use extended joints named "Spine1", "Spine2", etc, going upwards.
+  - If all 5 lumbar spine bones are included, "L5" maps to "Spine", "L4" maps to "Spine1", "L3" maps to "Spine2", "L2" maps to "Spine3", and "L1" maps to "Spine4".
+  - If only some of the lumbar spine bones are included, skip the ones that are not included. For example, if only "L5" and "L3" are included, then "L5" maps to "Spine" and "L3" maps to "Spine1".
+- The "Chest" joint corresponds to the lowest thoracic bone in the human spine, or the nearest equivalent for non-humans.
+  - This means that, in medical terminology, this is the "Th12" thoracic spine bone.
+  - If additional thoracic spine bones are included, use extended joints named "Chest1", "Chest2", etc, going upwards.
+  - If all 12 thoracic spine bones are included, "Th12" maps to "Chest", "Th11" maps to "Chest1", "Th10" maps to "Chest2", and so on, up to "Th1" which maps to "Chest11".
+  - If only some of the thoracic spine bones are included, skip the ones that are not included. For example, if only "Th12" and "Th6" are included, then "Th12" maps to "Chest" and "Th6" maps to "Chest1".
+    - Note: In some rigging systems, "Th6" is named "UpperChest" or similar. Since "UpperChest" has no standard meaning, RCSF prefers to using the extended joint system for such cases. When mapping RCSF to those systems, map the best middle-numbered extended chest joint to "UpperChest" based on how many extended chest joints are present: for example, "Chest1" if there is only one extended chest joint, "Chest6" if the joints go up to "Chest11", etc.
+- The "Neck" joint corresponds to the lowest cervical bone in the human spine, or the nearest equivalent for non-humans.
+  - This means that, in medical terminology, this is the "C7" cervical spine bone.
+  - If additional cervical spine bones are included, use extended joints named "Neck1", "Neck2", etc, going upwards.
+  - If all 7 cervical spine bones are included, "C7" maps to "Neck", "C6" maps to "Neck1", "C5" maps to "Neck2", and so on, up to "C1" which maps to "Neck6".
+  - If only some of the cervical spine bones are included, skip the ones that are not included. For example, if only "C7" and "C3" are included, then "C7" maps to "Neck" and "C3" maps to "Neck1".
+- The "Head" joint corresponds to the base of the skull in a human (occipital bone), or the nearest equivalent for non-humans.
+
+When representing human arms and legs, the following medical bone mappings SHOULD be used:
+
+- The left/right "Shoulder" joints do not correspond to any specific bone, and should be placed to provide human-like shoulder articulation.
+  - The shoulder is a complex joint involving multiple bones, specifically the scapula–clavicle–humerus kinematic loop.
+  - The name "Shoulder" is chosen to unambiguously represent the overall shoulder articulation, even though some existing skeleton systems use the term "Clavicle" instead.
+- The left/right "UpperArm" joints correspond to the humerus bones in human arms.
+- The left/right "LowerArm" joints correspond to the radius and ulna bones in human forearms.
+- The left/right "Hand" joints correspond to the carpal bones in human wrists.
+- The various finger joints correspond to the bones of the same medical names in human fingers.
+  - The non-thumb "Metacarpal" joints have a very limited range of motion, and are usually not required for basic animation, only highly detailed hand articulation. If present, they exist as children of the "Hand" joint, and have the corresponding finger's "Proximal" joint as their child.
+    - Note that this does not apply for the thumb, where the metacarpal bone is important for thumb articulation and should be included when the other thumb bones are included.
+- The left/right "UpperLeg" joints correspond to the femur bones in human thighs.
+- The left/right "LowerLeg" joints correspond to the tibia and fibula bones in human lower legs.
+- The left/right "Foot" joints correspond to the talus tarsal bones in human feet.
+  - The base "LeftFoot" and "RightFoot" bones represent the ankle joint where the talus connects to the tibia and fibula.
+  - If the subtalar joint is needed, represent it with extended joints such as "LeftFoot1" and "RightFoot1".
+- The left/right "Toes" joints do not correspond to any specific bone, and should be placed near the start of each foot's phalanx bones (phalanges).
+  - Individual toe bones (phalanges) are usually not required for basic animation, only moderately detailed animation. The toes are rarely visible, especially when covered by shoes or other footwear, and when they are visible, runtime applications often do not animate individual toes.
+  - If individual toe bones (phalanges) are required, they may be added as children of the collective left/right "Toes" joints.
+  - The naming convention of toe bones is not listed in the above hierarchy or table, since platform support for such bones is rare, but they should use a similar naming conventions as the finger bones, with "Left" or "Right", followed by finger-like names suffixed with "Toe", except with "Thumb" replaced with "Hallux" for the "big toe", followed by the bone name such as "Proximal" or "Distal".
+    - For example, "LeftHalluxProximal" would be the proximal bone of the left "big toe" or "first toe", "LeftMiddleToeIntermediate" would be the intermediate bone of the left "middle toe" or "third toe", and "RightRingToeDistal" would be the distal bone of the right "ring toe" or "fourth toe".
+    - Note that the scientific community is divided on calling the toe bone between proximal and distal the "intermediate" or "middle" phalanx. The term "intermediate" is mandated for consistency with finger bone naming, and to avoid confusion with the "middle toe". The name "LeftMiddleToeMiddle" is strictly forbidden due to semantic ambiguity.
+    - Note that ordinal names such as "first toe" to "fifth toe" are dismissed due to unnecessarily assigning an order to the bones, and size-based names such as "big toe" and "little toe" are not used to avoid ambiguity if a character's big toe is not actually the largest toe or if a character's little toe is not actually the smallest toe.
+  - The metatarsal bones have a very limited range of motion, and are usually not required for basic animation, only highly detailed foot articulation. Applications desiring highly detailed foot animation may add these as children of the last "Foot" joint, as siblings of the "Toes" joint. It is the responsibility of such animations to align the starts of the phalanges with the ends of the metatarsals. This structure complicates highly detailed foot rigs, but it keeps basic foot rigs simple, improving interoperability in less detailed applications.
+
+Similarly to the spine bones, extended joints can be used to represent additional bones in the arms and legs. For example, "LeftFoot" may represent the talus bone, while "LeftFoot1" may represent the calcaneus bone, together representing the subtalar joint. Extended bones may be used anywhere, even if they do not correspond to human anatomy, which may be useful to represent broken arms or legs.
+
+If a human or humanoid bipedal creature is rigged differently than the above medical bone mappings, such as for artistic reasons, it MAY still be considered a valid model that is usable as an animated character or avatar, but such rigging may lead to incorrect deformations, unexpected animation results, or other issues when used in applications expecting anatomically correct rigs. Deviations from the intended mappings are permitted but SHOULD be avoided whenever possible to ensure optimal interoperability across applications and platforms.
+
+### Non-standard Joints
+
+The Reference Canonical Skeleton Framework does not inhibit future expansion, rather, it provides a common baseline for interoperability of common bipedal skeleton structures.
+
+Additional joints MAY be added as children of existing joints to accommodate specialized use cases, provided that they do not conflict with existing joint names or naming patterns. Within a skeleton, all joint/bone/node names MUST be unique. Elements such as ears, hair, wings, tails, other appendages, or any other bones/joints MAY be added as children of existing joints and used for any purpose, such as secondary animation, attachment points, virtual transforms, spring bone simulation, fine control over deformation, or any other purpose.
 
 ## Mathematical Framework
 
