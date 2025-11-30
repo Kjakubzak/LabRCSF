@@ -223,15 +223,15 @@ Hips / Pelvis (ROOT)
 │    └── LeftLowerLeg
 │         ├── LeftLowerLegTwist (twist)
 │         └── LeftFoot
-│              ├── LeftToes (opt)
-│              └── LeftTip (opt)
+│              └── LeftToes (opt)
+│                   └── LeftToesTip (opt)
 └── RightUpperLeg
      ├── RightUpperLegTwist (twist)
      └── RightLowerLeg
           ├── RightLowerLegTwist (twist)
           └── RightFoot
-               ├── RightToes (opt)
-               └── RightTip (opt)
+               └── RightToes (opt)
+                    └── RightToesTip (opt)
 ```
 
 ## Joint Classification System
