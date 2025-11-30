@@ -1796,12 +1796,12 @@ Root
 | LeftLowerLeg               | LKnee                   | LeftLeg         | ltibia             | leftLowerLeg            | tibia_l      | LLeg     | LLeg          | LeftLeg         | Calf_L              | LeftLowerLeg            | LeftLowerLeg            |
 | LeftFoot                   | LFoot                   | LeftFoot        | lfoot              | leftFoot                | foot_l       | LFoot    | LFoot         | LeftFoot        | Foot_L              | LeftFoot                | LeftFoot                |
 | LeftToes                   | LToes                   | EndSite         | ltoes              | leftToes                | opt          | -        | LeftToes      | LeftToeBase     | Toe_L (opt)         | LeftToes (opt)          | LeftToes                |
-| LeftTip                    | LTip                    | -               | -                  | -                       | opt          | -        | LTip          | -               | LeftTip (opt)       | -                       | -                       |
+| LeftToesTip                | LTip                    | -               | -                  | -                       | opt          | -        | LTip          | -               | LeftTip (opt)       | -                       | -                       |
 | RightUpperLeg              | RLeg                    | RightUpLeg      | rfemur             | rightUpperLeg           | femur_r      | RThigh   | RThigh        | RightUpLeg      | Thigh_R             | RightUpperLeg           | RightUpperLeg           |
 | RightLowerLeg              | RKnee                   | RightLeg        | rtibia             | rightLowerLeg           | tibia_r      | RLeg     | RLeg          | RightLeg        | Calf_R              | RightLowerLeg           | RightLowerLeg           |
 | RightFoot                  | RFoot                   | RightFoot       | rfoot              | rightFoot               | foot_r       | RFoot    | RFoot         | RightFoot       | Foot_R              | RightFoot               | RightFoot               |
 | RightToes                  | RToes                   | EndSite         | rtoes              | rightToes               | opt          | -        | -             | RightToeBase    | Toe_R (opt)         | RightToes (opt)         | RightToes               |
-| RightTip                   | RTip                    | -               | -                  | -                       | opt          | -        | RTip          | -               | RightTip (opt)      | -                       | -                       |
+| RightToesTip               | RTip                    | -               | -                  | -                       | opt          | -        | RTip          | -               | RightTip (opt)      | -                       | -                       |
 
 ## Methodological Foundation
 
@@ -1858,9 +1858,9 @@ Hips / Pelvis
 │     │   └─ Head
 │     │        ├─ Jaw (opt)
 │     │        ├─ LeftEye (opt)
-│     │        │    └─ LeftEyeTwist (opt / twist)
+│     │        │    └─ LeftEyeTwist (twist)
 │     │        ├─ RightEye (opt)
-│     │        │    └─ RightEyeTwist (opt / twist)
+│     │        │    └─ RightEyeTwist (twist)
 │     │        ├─ LeftLid (opt)
 │     │        ├─ RightLid (opt)
 │     │        ├─ LeftEar (opt)
@@ -1879,78 +1879,68 @@ Hips / Pelvis
 │     │    └─ LeftUpperArm
 │     │         └─ LeftLowerArm
 │     │              └─ LeftHand
-│     │                   ├─ LeftThumb
-│     │                   │    ├─ LeftThumbMetacarpal (opt / twist)
-│     │                   │    ├─ LeftThumbProximal (opt / twist)
-│     │                   │    ├─ LeftThumbDistal (opt / twist)
-│     │                   │    └─ LeftThumbTip (opt)
-│     │                   ├─ LeftIndex
-│     │                   │    ├─ LeftIndexMetacarpal (opt / uncommon)
-│     │                   │    ├─ LeftIndexProximal (opt / twist)
-│     │                   │    ├─ LeftIndexIntermediate (opt / twist)
-│     │                   │    ├─ LeftIndexDistal (opt / twist)
-│     │                   │    └─ LeftIndexTip (opt)
-│     │                   ├─ LeftMiddle
-│     │                   │    ├─ LeftMiddleMetacarpal (opt / uncommon)
-│     │                   │    ├─ LeftMiddleProximal (opt / twist)
-│     │                   │    ├─ LeftMiddleIntermediate (opt / twist)
-│     │                   │    ├─ LeftMiddleDistal (opt / twist)
-│     │                   │    └─ LeftMiddleTip (opt)
-│     │                   ├─ LeftRing
-│     │                   │    ├─ LeftRingMetacarpal (opt / uncommon)
-│     │                   │    ├─ LeftRingProximal (opt / twist)
-│     │                   │    ├─ LeftRingIntermediate (opt / twist)
-│     │                   │    ├─ LeftRingDistal (opt / twist)
-│     │                   │    └─ LeftRingTip (opt)
-│     │                   └─ LeftPinky
-│     │                        ├─ LeftPinkyMetacarpal (opt / uncommon)
-│     │                        ├─ LeftPinkyProximal (opt / twist)
-│     │                        ├─ LeftPinkyIntermediate (opt / twist)
-│     │                        ├─ LeftPinkyDistal (opt / twist)
-│     │                        └─ LeftPinkyTip (opt)
+│     │                   ├─ LeftThumbMetacarpal (opt)
+│     │                   │    └─ LeftThumbProximal (opt)
+│     │                   │         └─ LeftThumbDistal (opt)
+│     │                   │              └─ LeftThumbTip (opt)
+│     │                   ├─ LeftIndexMetacarpal (opt / uncommon)
+│     │                   │    └─ LeftIndexProximal (opt)
+│     │                   │         └─ LeftIndexIntermediate (opt)
+│     │                   │              └─ LeftIndexDistal (opt)
+│     │                   │                   └─ LeftIndexTip (opt)
+│     │                   ├─ LeftMiddleMetacarpal (opt / uncommon)
+│     │                   │    └─ LeftMiddleProximal (opt)
+│     │                   │         └─ LeftMiddleIntermediate (opt)
+│     │                   │              └─ LeftMiddleDistal (opt)
+│     │                   │                   └─ LeftMiddleTip (opt)
+│     │                   ├─ LeftRingMetacarpal (opt / uncommon)
+│     │                   │    └─ LeftRingProximal (opt)
+│     │                   │         └─ LeftRingIntermediate (opt)
+│     │                   │              └─ LeftRingDistal (opt)
+│     │                   │                   └─ LeftRingTip (opt)
+│     │                   └─ LeftPinkyMetacarpal (opt / uncommon)
+│     │                        └─ LeftPinkyProximal (opt)
+│     │                             └─ LeftPinkyIntermediate (opt)
+│     │                                  └─ LeftPinkyDistal (opt)
+│     │                                       └─ LeftPinkyTip (opt)
 │     └─ RightShoulder
 │          └─ RightUpperArm
 │               └─ RightLowerArm
 │                    └─ RightHand
-│                         ├─ RightThumb
-│                         │    ├─ RightThumbMetacarpal (opt / twist)
-│                         │    ├─ RightThumbProximal (opt / twist)
-│                         │    ├─ RightThumbDistal (opt / twist)
-│                         │    └─ RightThumbTip (opt)
-│                         ├─ RightIndex
-│                         │    ├─ RightIndexMetacarpal (opt / uncommon)
-│                         │    ├─ RightIndexProximal (opt / twist)
-│                         │    ├─ RightIndexIntermediate (opt / twist)
-│                         │    ├─ RightIndexDistal (opt / twist)
-│                         │    └─ RightIndexTip (opt)
-│                         ├─ RightMiddle
-│                         │    ├─ RightMiddleMetacarpal (opt / uncommon)
-│                         │    ├─ RightMiddleProximal (opt / twist)
-│                         │    ├─ RightMiddleIntermediate (opt / twist)
-│                         │    ├─ RightMiddleDistal (opt / twist)
-│                         │    └─ RightMiddleTip (opt)
-│                         ├─ RightRing
-│                         │    ├─ RightRingMetacarpal (opt / uncommon)
-│                         │    ├─ RightRingProximal (opt / twist)
-│                         │    ├─ RightRingIntermediate (opt / twist)
-│                         │    ├─ RightRingDistal (opt / twist)
-│                         │    └─ RightRingTip (opt)
-│                         └─ RightPinky
-│                              ├─ RightPinkyMetacarpal (opt / uncommon)
-│                              ├─ RightPinkyProximal (opt / twist)
-│                              ├─ RightPinkyIntermediate (opt / twist)
-│                              ├─ RightPinkyDistal (opt / twist)
-│                              └─ RightPinkyTip (opt)
+│                         ├─ RightThumbMetacarpal (opt)
+│                         │    └─ RightThumbProximal (opt)
+│                         │         └─ RightThumbDistal (opt)
+│                         │              └─ RightThumbTip (opt)
+│                         ├─ RightIndexMetacarpal (opt / uncommon)
+│                         │    └─ RightIndexProximal (opt)
+│                         │         └─ RightIndexIntermediate (opt)
+│                         │              └─ RightIndexDistal (opt)
+│                         │                   └─ RightIndexTip (opt)
+│                         ├─ RightMiddleMetacarpal (opt / uncommon)
+│                         │    └─ RightMiddleProximal (opt)
+│                         │         └─ RightMiddleIntermediate (opt)
+│                         │              └─ RightMiddleDistal (opt)
+│                         │                   └─ RightMiddleTip (opt)
+│                         ├─ RightRingMetacarpal (opt / uncommon)
+│                         │    └─ RightRingProximal (opt)
+│                         │         └─ RightRingIntermediate (opt)
+│                         │              └─ RightRingDistal (opt)
+│                         │                   └─ RightRingTip (opt)
+│                         └─ RightPinkyMetacarpal (opt / uncommon)
+│                              └─ RightPinkyProximal (opt)
+│                                   └─ RightPinkyIntermediate (opt)
+│                                        └─ RightPinkyDistal (opt)
+│                                             └─ RightPinkyTip (opt)
 ├─ LeftUpperLeg
 │    └─ LeftLowerLeg
 │         └─ LeftFoot
-│              ├─ LeftToes (opt)
-│              └─ LeftTip (opt)
+│              └─ LeftToes (opt)
+│                   └─ LeftToesTip (opt)
 └─ RightUpperLeg
      └─ RightLowerLeg
           └─ RightFoot
-               ├─ RightToes (opt)
-               └─ RightTip (opt)
+               └─ RightToes (opt)
+                   └─ RightToesTip (opt)
 ```
 
 ---
@@ -1958,8 +1948,9 @@ Hips / Pelvis
 ### **Legend**
 
 - `(opt)` = optional joint, not present in all skeleton standards
+- `(opt / uncommon)` = optional joint, not present in most skeleton standards
 - `(twist)` = twist bone, for improved deformation (UE Mannequin, SMPL-X)
-- Fingers and toes are fully segmented: proximal → intermediate → distal → tip
+- Fingers and toes are fully segmented: metacarpal → proximal → intermediate → distal → tip
 - Facial and head joints fully enumerated for optional eyes, jaw, lips, cheeks
 - Root: Hips/Pelvis, all translations + rotations occur here
 
@@ -2125,10 +2116,10 @@ LeftUpperLeg,LLeg,LeftUpLeg,lfemur,leftUpperLeg,femur_l,LThigh,LThigh,LeftUpLeg,
 LeftLowerLeg,LKnee,LeftLeg,ltibia,leftLowerLeg,tibia_l,LLeg,LLeg,LeftLeg,Calf_L,LeftLowerLeg,LeftLowerLeg
 LeftFoot,LFoot,LeftFoot,lfoot,leftFoot,foot_l,LFoot,LFoot,LeftFoot,Foot_L,LeftFoot,LeftFoot
 LeftToes,LToes,EndSite,ltoes,leftToes,opt,-,LeftToes,LeftToeBase,Toe_L (opt),LeftToes (opt),LeftToes
-LeftTip,LTip,-,-,-,opt,-,LTip,-,LeftTip (opt),-,-
+LeftToesTip,LTip,-,-,-,opt,-,LTip,-,LeftTip (opt),-,-
 RightUpperLeg,RLeg,RightUpLeg,rfemur,rightUpperLeg,femur_r,RThigh,RThigh,RightUpLeg,Thigh_R,RightUpperLeg,RightUpperLeg
 RightLowerLeg,RKnee,RightLeg,rtibia,rightLowerLeg,tibia_r,RLeg,RLeg,RightLeg,Calf_R,RightLowerLeg,RightLowerLeg
 RightFoot,RFoot,RightFoot,rfoot,rightFoot,foot_r,RFoot,RFoot,RightFoot,Foot_R,RightFoot,RightFoot
 RightToes,RToes,EndSite,rtoes,rightToes,opt,-,-,RightToeBase,Toe_R (opt),RightToes (opt),RightToes
-RightTip,RTip,-,-,-,opt,-,RTip,-,RightTip (opt),-,-
+RightToesTip,RTip,-,-,-,opt,-,RTip,-,RightTip (opt),-,-
 ```
