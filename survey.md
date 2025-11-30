@@ -1796,12 +1796,12 @@ Root
 | LeftLowerLeg               | LKnee                   | LeftLeg         | ltibia             | leftLowerLeg            | tibia_l      | LLeg     | LLeg          | LeftLeg         | Calf_L              | LeftLowerLeg            | LeftLowerLeg            |
 | LeftFoot                   | LFoot                   | LeftFoot        | lfoot              | leftFoot                | foot_l       | LFoot    | LFoot         | LeftFoot        | Foot_L              | LeftFoot                | LeftFoot                |
 | LeftToes                   | LToes                   | EndSite         | ltoes              | leftToes                | opt          | -        | LeftToes      | LeftToeBase     | Toe_L (opt)         | LeftToes (opt)          | LeftToes                |
-| LeftTip                    | LTip                    | -               | -                  | -                       | opt          | -        | LTip          | -               | LeftTip (opt)       | -                       | -                       |
+| LeftToesTip                | LTip                    | -               | -                  | -                       | opt          | -        | LTip          | -               | LeftTip (opt)       | -                       | -                       |
 | RightUpperLeg              | RLeg                    | RightUpLeg      | rfemur             | rightUpperLeg           | femur_r      | RThigh   | RThigh        | RightUpLeg      | Thigh_R             | RightUpperLeg           | RightUpperLeg           |
 | RightLowerLeg              | RKnee                   | RightLeg        | rtibia             | rightLowerLeg           | tibia_r      | RLeg     | RLeg          | RightLeg        | Calf_R              | RightLowerLeg           | RightLowerLeg           |
 | RightFoot                  | RFoot                   | RightFoot       | rfoot              | rightFoot               | foot_r       | RFoot    | RFoot         | RightFoot       | Foot_R              | RightFoot               | RightFoot               |
 | RightToes                  | RToes                   | EndSite         | rtoes              | rightToes               | opt          | -        | -             | RightToeBase    | Toe_R (opt)         | RightToes (opt)         | RightToes               |
-| RightTip                   | RTip                    | -               | -                  | -                       | opt          | -        | RTip          | -               | RightTip (opt)      | -                       | -                       |
+| RightToesTip               | RTip                    | -               | -                  | -                       | opt          | -        | RTip          | -               | RightTip (opt)      | -                       | -                       |
 
 ## Methodological Foundation
 
@@ -1944,13 +1944,13 @@ Hips / Pelvis
 ├─ LeftUpperLeg
 │    └─ LeftLowerLeg
 │         └─ LeftFoot
-│              ├─ LeftToes (opt)
-│              └─ LeftTip (opt)
+│              └─ LeftToes (opt)
+│                   └─ LeftToesTip (opt)
 └─ RightUpperLeg
      └─ RightLowerLeg
           └─ RightFoot
-               ├─ RightToes (opt)
-               └─ RightTip (opt)
+               └─ RightToes (opt)
+                   └─ RightToesTip (opt)
 ```
 
 ---
@@ -2125,10 +2125,10 @@ LeftUpperLeg,LLeg,LeftUpLeg,lfemur,leftUpperLeg,femur_l,LThigh,LThigh,LeftUpLeg,
 LeftLowerLeg,LKnee,LeftLeg,ltibia,leftLowerLeg,tibia_l,LLeg,LLeg,LeftLeg,Calf_L,LeftLowerLeg,LeftLowerLeg
 LeftFoot,LFoot,LeftFoot,lfoot,leftFoot,foot_l,LFoot,LFoot,LeftFoot,Foot_L,LeftFoot,LeftFoot
 LeftToes,LToes,EndSite,ltoes,leftToes,opt,-,LeftToes,LeftToeBase,Toe_L (opt),LeftToes (opt),LeftToes
-LeftTip,LTip,-,-,-,opt,-,LTip,-,LeftTip (opt),-,-
+LeftToesTip,LTip,-,-,-,opt,-,LTip,-,LeftTip (opt),-,-
 RightUpperLeg,RLeg,RightUpLeg,rfemur,rightUpperLeg,femur_r,RThigh,RThigh,RightUpLeg,Thigh_R,RightUpperLeg,RightUpperLeg
 RightLowerLeg,RKnee,RightLeg,rtibia,rightLowerLeg,tibia_r,RLeg,RLeg,RightLeg,Calf_R,RightLowerLeg,RightLowerLeg
 RightFoot,RFoot,RightFoot,rfoot,rightFoot,foot_r,RFoot,RFoot,RightFoot,Foot_R,RightFoot,RightFoot
 RightToes,RToes,EndSite,rtoes,rightToes,opt,-,-,RightToeBase,Toe_R (opt),RightToes (opt),RightToes
-RightTip,RTip,-,-,-,opt,-,RTip,-,RightTip (opt),-,-
+RightToesTip,RTip,-,-,-,opt,-,RTip,-,RightTip (opt),-,-
 ```
