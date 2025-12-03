@@ -30,6 +30,7 @@ This framework provides synthesis-based solutions through comprehensive intermed
 - [ ] UE Mannequin - Unreal Engine reference skeleton
 - [x] Unity Mecanim - Unity semantic humanoid system
 - [x] Godot - Godot Engine [SkeletonProfileHumanoid](https://docs.godotengine.org/en/stable/classes/class_skeletonprofilehumanoid.html)
+- [ ] Second Life - Linden Lab Bento and legacy skeletons
 
 ### Create Tools
 

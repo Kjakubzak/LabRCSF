@@ -139,6 +139,21 @@ This document lists the primary documentation sources for each skeletal format a
 
 **Description:** Godot's SkeletonProfileHumanoid class defines a preset SkeletonProfile that is optimized for the human form. It contains 56 bones divided into 4 groups.
 
+## Second Life
+
+**Primary Documentation:**
+
+Locked wiki pages (read-only for non-admins):
+
+- https://wiki.secondlife.com/wiki/Project_Bento_Skeleton_Guide
+- https://wiki.secondlife.com/wiki/Mesh/Troubleshooting
+- https://wiki.secondlife.com/wiki/Appearance_Editor_and_affected_bones
+
+**Community Documentation:**
+
+- https://avalab.org/avastar/279/knowledge/the-sl-skeleton/
+- https://community.secondlife.com/forums/topic/40196-joint-names/
+
 ---
 
 ## Research Notes
