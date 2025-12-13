@@ -156,6 +156,22 @@ Locked wiki pages (read-only for non-admins):
 
 ---
 
+## Roblox
+
+**Primary Documentation:**
+
+- R15 Character Specifications - https://create.roblox.com/docs/art/characters/specifications
+- Rigging Guide - https://create.roblox.com/docs/art/modeling/rigging
+- Facial Animation Overview - https://create.roblox.com/docs/art/characters/facial-animation
+- Creating Basic Heads - https://create.roblox.com/docs/art/characters/facial-animation/create-basic-heads
+- Adding Face Bones (DynamicHead) - https://create.roblox.com/docs/art/characters/facial-animation/create-basic-heads#add-face-bones
+- Animating Heads - https://create.roblox.com/docs/art/characters/facial-animation/animate-heads
+
+**Description:** Roblox R15 skeleton provides a simplified 15-joint body hierarchy optimized for user-generated content. The optional DynamicHead joint serves as the root for facial animation, allowing users to define custom child joints for FACS-based expressions.
+
+---
+
+
 ## Research Notes
 
 Several formats lack easily accessible primary documentation sources:
