@@ -156,6 +156,13 @@ Locked wiki pages (read-only for non-admins):
 
 ---
 
+## Momentum Human Rig
+
+**Primary Documentation:**
+- https://github.com/facebookresearch/MHR
+- https://github.com/facebookresearch/sam-3d-body
+- https://ai.meta.com/research/publications/sam-3d-body-robust-full-body-human-mesh-recovery/ 
+
 ## Research Notes
 
 Several formats lack easily accessible primary documentation sources:
