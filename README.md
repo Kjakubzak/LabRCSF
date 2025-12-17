@@ -32,6 +32,7 @@ This framework provides synthesis-based solutions through comprehensive intermed
 - [x] Godot - Godot Engine [SkeletonProfileHumanoid](https://docs.godotengine.org/en/stable/classes/class_skeletonprofilehumanoid.html)
 - [ ] Second Life - Linden Lab Bento and legacy skeletons
 - [ ] Roblox - R15 Reference Skeleton
+- [ ] Momentum Humanoid Rig - Meta SAM3D Body Skeleton
 
 ### Create Tools
 
