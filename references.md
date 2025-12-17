@@ -171,6 +171,17 @@ Locked wiki pages (read-only for non-admins):
 
 ---
 
+## Momentum Human Rig
+
+**Primary Documentation:**
+
+- GitHub Repository: facebookresearch/MHR - https://github.com/facebookresearch/MHR
+- GitHub Repository: facebookresearch/sam-3d-body - https://github.com/facebookresearch/sam-3d-body
+- Meta AI Research Publication: SAM 3D Body - https://ai.meta.com/research/publications/sam-3d-body-robust-full-body-human-mesh-recovery/
+
+**Description:** The Momentum Human Rig (MHR) is a high-fidelity humanoid skeleton designed for professional motion capture and animation production. It features 127 joints with extensive twist bone chains (5 per upper limb segment, 4 per lower limb segment) for smooth deformation, detailed foot anatomy (talocrural, subtalar, transverse tarsal joints), full finger articulation with metacarpals, and a 5-segment tongue for speech animation.
+
+---
 
 ## Research Notes
 
